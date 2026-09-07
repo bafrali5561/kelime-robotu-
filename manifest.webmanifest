@@ -1,0 +1,10 @@
+{
+  "name": "8. Sınıf Kelime Robotu",
+  "short_name": "Kelime Robotu",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4f6f2",
+  "theme_color": "#173f2b",
+  "lang": "tr",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

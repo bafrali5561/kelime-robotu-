@@ -1,0 +1,4837 @@
+window.VOCAB_DATA = [
+  {
+    "unit": 1,
+    "title": "Friendship",
+    "words": [
+      {
+        "id": "u1-1",
+        "en": "accept",
+        "tr": "kabul etmek"
+      },
+      {
+        "id": "u1-2",
+        "en": "argue",
+        "tr": "tartışmak"
+      },
+      {
+        "id": "u1-3",
+        "en": "back up",
+        "tr": "desteklemek"
+      },
+      {
+        "id": "u1-4",
+        "en": "best friend",
+        "tr": "en iyi arkadaş"
+      },
+      {
+        "id": "u1-5",
+        "en": "buddy",
+        "tr": "kanka, dost"
+      },
+      {
+        "id": "u1-6",
+        "en": "busy",
+        "tr": "meşgul"
+      },
+      {
+        "id": "u1-7",
+        "en": "care about",
+        "tr": "önemsemek, umursamak"
+      },
+      {
+        "id": "u1-8",
+        "en": "casual",
+        "tr": "günlük kıyafet"
+      },
+      {
+        "id": "u1-9",
+        "en": "cheerful",
+        "tr": "neşeli"
+      },
+      {
+        "id": "u1-10",
+        "en": "come over",
+        "tr": "uğramak, ziyaret etmek"
+      },
+      {
+        "id": "u1-11",
+        "en": "concept",
+        "tr": "konsept, kavram"
+      },
+      {
+        "id": "u1-12",
+        "en": "concert",
+        "tr": "konser"
+      },
+      {
+        "id": "u1-13",
+        "en": "cool",
+        "tr": "havalı"
+      },
+      {
+        "id": "u1-14",
+        "en": "count on",
+        "tr": "güvenmek"
+      },
+      {
+        "id": "u1-15",
+        "en": "date",
+        "tr": "tarih"
+      },
+      {
+        "id": "u1-16",
+        "en": "dinner",
+        "tr": "akşam yemeği"
+      },
+      {
+        "id": "u1-17",
+        "en": "dress",
+        "tr": "kıyafet"
+      },
+      {
+        "id": "u1-18",
+        "en": "empty",
+        "tr": "boş"
+      },
+      {
+        "id": "u1-19",
+        "en": "event",
+        "tr": "etkinlik"
+      },
+      {
+        "id": "u1-20",
+        "en": "exam",
+        "tr": "sınav"
+      },
+      {
+        "id": "u1-21",
+        "en": "features",
+        "tr": "özellikler"
+      },
+      {
+        "id": "u1-22",
+        "en": "feel",
+        "tr": "hissetmek"
+      },
+      {
+        "id": "u1-23",
+        "en": "friendship",
+        "tr": "arkadaşlık"
+      },
+      {
+        "id": "u1-24",
+        "en": "funny",
+        "tr": "eğlenceli, komik"
+      },
+      {
+        "id": "u1-25",
+        "en": "generous",
+        "tr": "cömert"
+      },
+      {
+        "id": "u1-26",
+        "en": "get on well with",
+        "tr": "iyi anlaşmak, iyi geçinmek"
+      },
+      {
+        "id": "u1-27",
+        "en": "gift",
+        "tr": "hediye"
+      },
+      {
+        "id": "u1-28",
+        "en": "go for a walk",
+        "tr": "yürüyüşe çıkmak"
+      },
+      {
+        "id": "u1-29",
+        "en": "graduation",
+        "tr": "mezuniyet"
+      },
+      {
+        "id": "u1-30",
+        "en": "great",
+        "tr": "harika"
+      },
+      {
+        "id": "u1-31",
+        "en": "guest",
+        "tr": "misafir"
+      },
+      {
+        "id": "u1-32",
+        "en": "have a rest",
+        "tr": "dinlenmek"
+      },
+      {
+        "id": "u1-33",
+        "en": "helpful",
+        "tr": "yardımsever"
+      },
+      {
+        "id": "u1-34",
+        "en": "honest",
+        "tr": "dürüst"
+      },
+      {
+        "id": "u1-35",
+        "en": "hungry",
+        "tr": "aç"
+      },
+      {
+        "id": "u1-36",
+        "en": "I'm afraid",
+        "tr": "korkarım ki"
+      },
+      {
+        "id": "u1-37",
+        "en": "idea",
+        "tr": "fikir"
+      },
+      {
+        "id": "u1-38",
+        "en": "invitation",
+        "tr": "davet"
+      },
+      {
+        "id": "u1-39",
+        "en": "invite",
+        "tr": "davet etmek"
+      },
+      {
+        "id": "u1-40",
+        "en": "jealous",
+        "tr": "kıskanç"
+      },
+      {
+        "id": "u1-41",
+        "en": "join",
+        "tr": "katılmak"
+      },
+      {
+        "id": "u1-42",
+        "en": "keep secret",
+        "tr": "sır tutmak"
+      },
+      {
+        "id": "u1-43",
+        "en": "kind",
+        "tr": "kibar, nazik"
+      },
+      {
+        "id": "u1-44",
+        "en": "laid-back",
+        "tr": "umursamaz, gamsız, sakin"
+      },
+      {
+        "id": "u1-45",
+        "en": "lie",
+        "tr": "yalan"
+      },
+      {
+        "id": "u1-46",
+        "en": "local park",
+        "tr": "yerel park"
+      },
+      {
+        "id": "u1-47",
+        "en": "loyal",
+        "tr": "sadık"
+      },
+      {
+        "id": "u1-48",
+        "en": "lucky",
+        "tr": "şanslı"
+      },
+      {
+        "id": "u1-49",
+        "en": "mate",
+        "tr": "arkadaş"
+      },
+      {
+        "id": "u1-50",
+        "en": "meet",
+        "tr": "buluşmak, bir araya gelmek"
+      },
+      {
+        "id": "u1-51",
+        "en": "mistake",
+        "tr": "hata"
+      },
+      {
+        "id": "u1-52",
+        "en": "movie",
+        "tr": "film"
+      },
+      {
+        "id": "u1-53",
+        "en": "offer",
+        "tr": "öneri, teklif"
+      },
+      {
+        "id": "u1-54",
+        "en": "organise",
+        "tr": "düzenlemek"
+      },
+      {
+        "id": "u1-55",
+        "en": "pessimistic",
+        "tr": "kötümser"
+      },
+      {
+        "id": "u1-56",
+        "en": "place",
+        "tr": "yer, mekan"
+      },
+      {
+        "id": "u1-57",
+        "en": "present",
+        "tr": "hediye"
+      },
+      {
+        "id": "u1-58",
+        "en": "refuse",
+        "tr": "reddetmek"
+      },
+      {
+        "id": "u1-59",
+        "en": "reliable",
+        "tr": "güvenilir"
+      },
+      {
+        "id": "u1-60",
+        "en": "rude",
+        "tr": "kaba"
+      },
+      {
+        "id": "u1-61",
+        "en": "same",
+        "tr": "aynı"
+      },
+      {
+        "id": "u1-62",
+        "en": "secret",
+        "tr": "sır, giz"
+      },
+      {
+        "id": "u1-63",
+        "en": "selfish",
+        "tr": "bencil"
+      },
+      {
+        "id": "u1-64",
+        "en": "share",
+        "tr": "paylaşmak"
+      },
+      {
+        "id": "u1-65",
+        "en": "shout",
+        "tr": "bağırmak"
+      },
+      {
+        "id": "u1-66",
+        "en": "side",
+        "tr": "taraf, yan"
+      },
+      {
+        "id": "u1-67",
+        "en": "singer",
+        "tr": "şarkıcı"
+      },
+      {
+        "id": "u1-68",
+        "en": "smile",
+        "tr": "gülümsemek, gülmek"
+      },
+      {
+        "id": "u1-69",
+        "en": "stingy",
+        "tr": "cimri"
+      },
+      {
+        "id": "u1-70",
+        "en": "stubborn",
+        "tr": "inatçı"
+      },
+      {
+        "id": "u1-71",
+        "en": "support",
+        "tr": "desteklemek"
+      },
+      {
+        "id": "u1-72",
+        "en": "supportive",
+        "tr": "destekleyici"
+      },
+      {
+        "id": "u1-73",
+        "en": "sure",
+        "tr": "tabii ki, elbette / emin olmak"
+      },
+      {
+        "id": "u1-74",
+        "en": "tell the truth",
+        "tr": "doğruyu söylemek"
+      },
+      {
+        "id": "u1-75",
+        "en": "thirsty",
+        "tr": "susamış, susuz"
+      },
+      {
+        "id": "u1-76",
+        "en": "time",
+        "tr": "saat / zaman"
+      },
+      {
+        "id": "u1-77",
+        "en": "tired",
+        "tr": "yorgun"
+      },
+      {
+        "id": "u1-78",
+        "en": "together",
+        "tr": "birlikte"
+      },
+      {
+        "id": "u1-79",
+        "en": "tomorrow",
+        "tr": "yarın"
+      },
+      {
+        "id": "u1-80",
+        "en": "true friend",
+        "tr": "doğru arkadaş"
+      },
+      {
+        "id": "u1-81",
+        "en": "trust",
+        "tr": "güvenmek, güven"
+      },
+      {
+        "id": "u1-82",
+        "en": "trustworthy",
+        "tr": "güvenilir"
+      },
+      {
+        "id": "u1-83",
+        "en": "visit",
+        "tr": "ziyaret etmek"
+      },
+      {
+        "id": "u1-84",
+        "en": "walk",
+        "tr": "yürümek"
+      },
+      {
+        "id": "u1-85",
+        "en": "why not?",
+        "tr": "neden olmasın?"
+      }
+    ]
+  },
+  {
+    "unit": 2,
+    "title": "Teen Life",
+    "words": [
+      {
+        "id": "u2-1",
+        "en": "admire",
+        "tr": "beğenmek, hayran kalmak"
+      },
+      {
+        "id": "u2-2",
+        "en": "agree",
+        "tr": "aynı fikirde olmak"
+      },
+      {
+        "id": "u2-3",
+        "en": "always",
+        "tr": "daima"
+      },
+      {
+        "id": "u2-4",
+        "en": "amazing",
+        "tr": "şaşırtıcı, inanılmaz"
+      },
+      {
+        "id": "u2-5",
+        "en": "among",
+        "tr": "arasında"
+      },
+      {
+        "id": "u2-6",
+        "en": "argue",
+        "tr": "tartışmak"
+      },
+      {
+        "id": "u2-7",
+        "en": "attend",
+        "tr": "katılmak"
+      },
+      {
+        "id": "u2-8",
+        "en": "author",
+        "tr": "yazar"
+      },
+      {
+        "id": "u2-9",
+        "en": "band",
+        "tr": "müzik grubu"
+      },
+      {
+        "id": "u2-10",
+        "en": "brush teeth",
+        "tr": "diş fırçalamak"
+      },
+      {
+        "id": "u2-11",
+        "en": "can't stand",
+        "tr": "katlanamamak, tahammül edememek"
+      },
+      {
+        "id": "u2-12",
+        "en": "casual",
+        "tr": "gündelik"
+      },
+      {
+        "id": "u2-13",
+        "en": "chat",
+        "tr": "sohbet"
+      },
+      {
+        "id": "u2-14",
+        "en": "concert",
+        "tr": "konser"
+      },
+      {
+        "id": "u2-15",
+        "en": "cooking class",
+        "tr": "yemek kursu"
+      },
+      {
+        "id": "u2-16",
+        "en": "delicious",
+        "tr": "lezzetli"
+      },
+      {
+        "id": "u2-17",
+        "en": "do the laundry",
+        "tr": "çamaşır yıkamak"
+      },
+      {
+        "id": "u2-18",
+        "en": "draw pictures",
+        "tr": "resimler çizmek"
+      },
+      {
+        "id": "u2-19",
+        "en": "dream",
+        "tr": "hayal, rüya"
+      },
+      {
+        "id": "u2-20",
+        "en": "energetic",
+        "tr": "enerjik"
+      },
+      {
+        "id": "u2-21",
+        "en": "enjoy",
+        "tr": "hoşlanmak, zevk almak"
+      },
+      {
+        "id": "u2-22",
+        "en": "enjoyable",
+        "tr": "eğlenceli"
+      },
+      {
+        "id": "u2-23",
+        "en": "exciting",
+        "tr": "heyecan verici"
+      },
+      {
+        "id": "u2-24",
+        "en": "extreme",
+        "tr": "aşırı, en uç"
+      },
+      {
+        "id": "u2-25",
+        "en": "famous",
+        "tr": "ünlü"
+      },
+      {
+        "id": "u2-26",
+        "en": "fascinating",
+        "tr": "büyüleyici"
+      },
+      {
+        "id": "u2-27",
+        "en": "fond of",
+        "tr": "düşkün olmak"
+      },
+      {
+        "id": "u2-28",
+        "en": "forget",
+        "tr": "unutmak"
+      },
+      {
+        "id": "u2-29",
+        "en": "get on the bus",
+        "tr": "otobüse binmek"
+      },
+      {
+        "id": "u2-30",
+        "en": "get up",
+        "tr": "uyanmak, kalkmak"
+      },
+      {
+        "id": "u2-31",
+        "en": "go trekking",
+        "tr": "yürüyüşe gitmek"
+      },
+      {
+        "id": "u2-32",
+        "en": "good at",
+        "tr": "bir şeyde iyi olmak"
+      },
+      {
+        "id": "u2-33",
+        "en": "great",
+        "tr": "harika"
+      },
+      {
+        "id": "u2-34",
+        "en": "growing flowers",
+        "tr": "çiçekler yetiştirmek"
+      },
+      {
+        "id": "u2-35",
+        "en": "gym",
+        "tr": "spor salonu"
+      },
+      {
+        "id": "u2-36",
+        "en": "hard",
+        "tr": "zor"
+      },
+      {
+        "id": "u2-37",
+        "en": "healthy",
+        "tr": "sağlıklı"
+      },
+      {
+        "id": "u2-38",
+        "en": "hear",
+        "tr": "işitmek, duymak"
+      },
+      {
+        "id": "u2-39",
+        "en": "housework",
+        "tr": "ev işi"
+      },
+      {
+        "id": "u2-40",
+        "en": "impressive",
+        "tr": "etkileyici"
+      },
+      {
+        "id": "u2-41",
+        "en": "interested in",
+        "tr": "ilgili olmak"
+      },
+      {
+        "id": "u2-42",
+        "en": "interview",
+        "tr": "röportaj, görüşme"
+      },
+      {
+        "id": "u2-43",
+        "en": "join",
+        "tr": "katılmak"
+      },
+      {
+        "id": "u2-44",
+        "en": "joke",
+        "tr": "şaka"
+      },
+      {
+        "id": "u2-45",
+        "en": "keen on",
+        "tr": "meraklı olmak, hevesli olmak"
+      },
+      {
+        "id": "u2-46",
+        "en": "knitting",
+        "tr": "örgü"
+      },
+      {
+        "id": "u2-47",
+        "en": "learn",
+        "tr": "öğrenmek"
+      },
+      {
+        "id": "u2-48",
+        "en": "loud",
+        "tr": "sesli, gürültülü"
+      },
+      {
+        "id": "u2-49",
+        "en": "martial arts",
+        "tr": "dövüş sanatları"
+      },
+      {
+        "id": "u2-50",
+        "en": "nature",
+        "tr": "doğa"
+      },
+      {
+        "id": "u2-51",
+        "en": "never",
+        "tr": "asla, hiç"
+      },
+      {
+        "id": "u2-52",
+        "en": "often",
+        "tr": "sık sık"
+      },
+      {
+        "id": "u2-53",
+        "en": "on foot",
+        "tr": "yürüyerek"
+      },
+      {
+        "id": "u2-54",
+        "en": "pleasure",
+        "tr": "zevk"
+      },
+      {
+        "id": "u2-55",
+        "en": "prefer",
+        "tr": "tercih etmek"
+      },
+      {
+        "id": "u2-56",
+        "en": "prepare dinner",
+        "tr": "akşam yemeğini hazırlamak"
+      },
+      {
+        "id": "u2-57",
+        "en": "rarely",
+        "tr": "nadiren"
+      },
+      {
+        "id": "u2-58",
+        "en": "recipe",
+        "tr": "yemek tarifi"
+      },
+      {
+        "id": "u2-59",
+        "en": "relationship",
+        "tr": "ilişki, bağ"
+      },
+      {
+        "id": "u2-60",
+        "en": "respectful",
+        "tr": "saygılı"
+      },
+      {
+        "id": "u2-61",
+        "en": "result",
+        "tr": "sonuç"
+      },
+      {
+        "id": "u2-62",
+        "en": "ridiculous",
+        "tr": "saçma, gülünç, komik"
+      },
+      {
+        "id": "u2-63",
+        "en": "routine",
+        "tr": "rutin, sıradan"
+      },
+      {
+        "id": "u2-64",
+        "en": "serious",
+        "tr": "ciddi"
+      },
+      {
+        "id": "u2-65",
+        "en": "sing a song",
+        "tr": "şarkı söylemek"
+      },
+      {
+        "id": "u2-66",
+        "en": "singer",
+        "tr": "şarkıcı"
+      },
+      {
+        "id": "u2-67",
+        "en": "skydiving",
+        "tr": "gökyüzü dalışı"
+      },
+      {
+        "id": "u2-68",
+        "en": "slow music",
+        "tr": "yavaş müzik"
+      },
+      {
+        "id": "u2-69",
+        "en": "snob",
+        "tr": "burnu havada, züppe"
+      },
+      {
+        "id": "u2-70",
+        "en": "soccer",
+        "tr": "futbol"
+      },
+      {
+        "id": "u2-71",
+        "en": "spend time with relatives",
+        "tr": "akrabalarla zaman geçirmek"
+      },
+      {
+        "id": "u2-72",
+        "en": "take a nap",
+        "tr": "şekerleme yapmak, kestirmek"
+      },
+      {
+        "id": "u2-73",
+        "en": "talent",
+        "tr": "kabiliyet, yetenek"
+      },
+      {
+        "id": "u2-74",
+        "en": "terrible",
+        "tr": "berbat, çok kötü / müthiş"
+      },
+      {
+        "id": "u2-75",
+        "en": "together",
+        "tr": "birlikte"
+      },
+      {
+        "id": "u2-76",
+        "en": "training",
+        "tr": "antrenman, egzersiz"
+      },
+      {
+        "id": "u2-77",
+        "en": "trendy",
+        "tr": "moda, tarz"
+      },
+      {
+        "id": "u2-78",
+        "en": "unbearable",
+        "tr": "katlanılmaz, tahammül edilemez"
+      },
+      {
+        "id": "u2-79",
+        "en": "understand",
+        "tr": "anlamak"
+      },
+      {
+        "id": "u2-80",
+        "en": "visit",
+        "tr": "ziyaret etmek"
+      },
+      {
+        "id": "u2-81",
+        "en": "voice",
+        "tr": "ses"
+      },
+      {
+        "id": "u2-82",
+        "en": "wake up",
+        "tr": "uyanmak, kalkmak"
+      },
+      {
+        "id": "u2-83",
+        "en": "weekdays",
+        "tr": "hafta içi günler"
+      },
+      {
+        "id": "u2-84",
+        "en": "weekend",
+        "tr": "hafta sonu"
+      },
+      {
+        "id": "u2-85",
+        "en": "wonderful",
+        "tr": "harika"
+      },
+      {
+        "id": "u2-86",
+        "en": "workout",
+        "tr": "antrenman yapmak"
+      }
+    ]
+  },
+  {
+    "unit": 3,
+    "title": "In The Kitchen",
+    "words": [
+      {
+        "id": "u3-1",
+        "en": "add",
+        "tr": "eklemek"
+      },
+      {
+        "id": "u3-2",
+        "en": "after that",
+        "tr": "ondan sonra"
+      },
+      {
+        "id": "u3-3",
+        "en": "bake",
+        "tr": "fırında pişirmek (unlu mamül)"
+      },
+      {
+        "id": "u3-4",
+        "en": "baking powder",
+        "tr": "kabartma tozu"
+      },
+      {
+        "id": "u3-5",
+        "en": "baking tray",
+        "tr": "pişirme tepsisi"
+      },
+      {
+        "id": "u3-6",
+        "en": "beef",
+        "tr": "biftek"
+      },
+      {
+        "id": "u3-7",
+        "en": "bitter",
+        "tr": "acı"
+      },
+      {
+        "id": "u3-8",
+        "en": "boil",
+        "tr": "kaynatmak, haşlamak"
+      },
+      {
+        "id": "u3-9",
+        "en": "bowl",
+        "tr": "kase"
+      },
+      {
+        "id": "u3-10",
+        "en": "bread",
+        "tr": "ekmek"
+      },
+      {
+        "id": "u3-11",
+        "en": "butter",
+        "tr": "tereyağı"
+      },
+      {
+        "id": "u3-12",
+        "en": "can",
+        "tr": "kutu"
+      },
+      {
+        "id": "u3-13",
+        "en": "carrot",
+        "tr": "havuç"
+      },
+      {
+        "id": "u3-14",
+        "en": "chicken",
+        "tr": "tavuk"
+      },
+      {
+        "id": "u3-15",
+        "en": "chop",
+        "tr": "doğramak"
+      },
+      {
+        "id": "u3-16",
+        "en": "cold",
+        "tr": "soğuk"
+      },
+      {
+        "id": "u3-17",
+        "en": "cook",
+        "tr": "pişirmek"
+      },
+      {
+        "id": "u3-18",
+        "en": "cookie",
+        "tr": "kurabiye"
+      },
+      {
+        "id": "u3-19",
+        "en": "cover",
+        "tr": "kaplamak"
+      },
+      {
+        "id": "u3-20",
+        "en": "crack",
+        "tr": "kırmak (yumurta)"
+      },
+      {
+        "id": "u3-21",
+        "en": "cuisine",
+        "tr": "yemek kültürü, mutfak"
+      },
+      {
+        "id": "u3-22",
+        "en": "cup",
+        "tr": "fincan, kupa"
+      },
+      {
+        "id": "u3-23",
+        "en": "cut",
+        "tr": "kesmek"
+      },
+      {
+        "id": "u3-24",
+        "en": "delicious",
+        "tr": "lezzetli"
+      },
+      {
+        "id": "u3-25",
+        "en": "dessert",
+        "tr": "tatlı"
+      },
+      {
+        "id": "u3-26",
+        "en": "dice",
+        "tr": "küp küp doğramak"
+      },
+      {
+        "id": "u3-27",
+        "en": "dish",
+        "tr": "tabak, yemek"
+      },
+      {
+        "id": "u3-28",
+        "en": "enjoy the meal",
+        "tr": "afiyet olsun"
+      },
+      {
+        "id": "u3-29",
+        "en": "finally",
+        "tr": "son olarak"
+      },
+      {
+        "id": "u3-30",
+        "en": "first",
+        "tr": "ilk olarak"
+      },
+      {
+        "id": "u3-31",
+        "en": "flour",
+        "tr": "un"
+      },
+      {
+        "id": "u3-32",
+        "en": "follow",
+        "tr": "takip etmek"
+      },
+      {
+        "id": "u3-33",
+        "en": "fork",
+        "tr": "çatal"
+      },
+      {
+        "id": "u3-34",
+        "en": "fresh",
+        "tr": "taze"
+      },
+      {
+        "id": "u3-35",
+        "en": "fruit",
+        "tr": "meyve"
+      },
+      {
+        "id": "u3-36",
+        "en": "fry",
+        "tr": "yağda kızartmak"
+      },
+      {
+        "id": "u3-37",
+        "en": "frying pan",
+        "tr": "kızartma tavası"
+      },
+      {
+        "id": "u3-38",
+        "en": "glass",
+        "tr": "bardak"
+      },
+      {
+        "id": "u3-39",
+        "en": "grapes",
+        "tr": "üzüm"
+      },
+      {
+        "id": "u3-40",
+        "en": "grate",
+        "tr": "rendelemek"
+      },
+      {
+        "id": "u3-41",
+        "en": "grater",
+        "tr": "rende"
+      },
+      {
+        "id": "u3-42",
+        "en": "grill",
+        "tr": "ızgarada pişirmek"
+      },
+      {
+        "id": "u3-43",
+        "en": "handful",
+        "tr": "avuç dolusu"
+      },
+      {
+        "id": "u3-44",
+        "en": "healthy",
+        "tr": "sağlıklı"
+      },
+      {
+        "id": "u3-45",
+        "en": "heat",
+        "tr": "ısıtmak"
+      },
+      {
+        "id": "u3-46",
+        "en": "homemade",
+        "tr": "ev yapımı"
+      },
+      {
+        "id": "u3-47",
+        "en": "hot",
+        "tr": "sıcak"
+      },
+      {
+        "id": "u3-48",
+        "en": "how long",
+        "tr": "ne kadar süre"
+      },
+      {
+        "id": "u3-49",
+        "en": "ingredients",
+        "tr": "malzemeler, içindekiler"
+      },
+      {
+        "id": "u3-50",
+        "en": "kitchen",
+        "tr": "mutfak"
+      },
+      {
+        "id": "u3-51",
+        "en": "knead",
+        "tr": "yoğurmak"
+      },
+      {
+        "id": "u3-52",
+        "en": "knife",
+        "tr": "bıçak"
+      },
+      {
+        "id": "u3-53",
+        "en": "lasagna sheet",
+        "tr": "hamur yaprağı"
+      },
+      {
+        "id": "u3-54",
+        "en": "last",
+        "tr": "en son"
+      },
+      {
+        "id": "u3-55",
+        "en": "lentil",
+        "tr": "mercimek"
+      },
+      {
+        "id": "u3-56",
+        "en": "loaf tin",
+        "tr": "pişirme kalıbı"
+      },
+      {
+        "id": "u3-57",
+        "en": "marinate",
+        "tr": "terbiye etmek"
+      },
+      {
+        "id": "u3-58",
+        "en": "mash",
+        "tr": "pürelemek"
+      },
+      {
+        "id": "u3-59",
+        "en": "meal",
+        "tr": "yemek"
+      },
+      {
+        "id": "u3-60",
+        "en": "meat",
+        "tr": "et"
+      },
+      {
+        "id": "u3-61",
+        "en": "melt",
+        "tr": "eritmek"
+      },
+      {
+        "id": "u3-62",
+        "en": "mince",
+        "tr": "kıyma"
+      },
+      {
+        "id": "u3-63",
+        "en": "mix",
+        "tr": "karıştırmak"
+      },
+      {
+        "id": "u3-64",
+        "en": "mixture",
+        "tr": "karışım"
+      },
+      {
+        "id": "u3-65",
+        "en": "mushroom",
+        "tr": "mantar"
+      },
+      {
+        "id": "u3-66",
+        "en": "mutton",
+        "tr": "koyun eti"
+      },
+      {
+        "id": "u3-67",
+        "en": "next",
+        "tr": "sonra"
+      },
+      {
+        "id": "u3-68",
+        "en": "noodle",
+        "tr": "erişte, makarna"
+      },
+      {
+        "id": "u3-69",
+        "en": "nutritious",
+        "tr": "besleyici"
+      },
+      {
+        "id": "u3-70",
+        "en": "oil",
+        "tr": "sıvı yağ"
+      },
+      {
+        "id": "u3-71",
+        "en": "olive oil",
+        "tr": "zeytin yağı"
+      },
+      {
+        "id": "u3-72",
+        "en": "onion",
+        "tr": "soğan"
+      },
+      {
+        "id": "u3-73",
+        "en": "oven",
+        "tr": "fırın"
+      },
+      {
+        "id": "u3-74",
+        "en": "pan",
+        "tr": "tava"
+      },
+      {
+        "id": "u3-75",
+        "en": "parsley",
+        "tr": "maydanoz"
+      },
+      {
+        "id": "u3-76",
+        "en": "pasta",
+        "tr": "makarna"
+      },
+      {
+        "id": "u3-77",
+        "en": "peel",
+        "tr": "soymak"
+      },
+      {
+        "id": "u3-78",
+        "en": "pepper",
+        "tr": "biber"
+      },
+      {
+        "id": "u3-79",
+        "en": "pinch",
+        "tr": "tutam"
+      },
+      {
+        "id": "u3-80",
+        "en": "plate",
+        "tr": "tabak"
+      },
+      {
+        "id": "u3-81",
+        "en": "pour",
+        "tr": "dökmek"
+      },
+      {
+        "id": "u3-82",
+        "en": "prepare",
+        "tr": "hazırlamak"
+      },
+      {
+        "id": "u3-83",
+        "en": "process",
+        "tr": "süreç, aşama"
+      },
+      {
+        "id": "u3-84",
+        "en": "put",
+        "tr": "koymak"
+      },
+      {
+        "id": "u3-85",
+        "en": "recipe",
+        "tr": "tarif"
+      },
+      {
+        "id": "u3-86",
+        "en": "rice",
+        "tr": "pirinç"
+      },
+      {
+        "id": "u3-87",
+        "en": "salt",
+        "tr": "tuz"
+      },
+      {
+        "id": "u3-88",
+        "en": "salty",
+        "tr": "tuzlu"
+      },
+      {
+        "id": "u3-89",
+        "en": "sauce",
+        "tr": "sos"
+      },
+      {
+        "id": "u3-90",
+        "en": "saucepan",
+        "tr": "sos tavası, tencere"
+      },
+      {
+        "id": "u3-91",
+        "en": "second",
+        "tr": "ikinci olarak"
+      },
+      {
+        "id": "u3-92",
+        "en": "serve",
+        "tr": "servis etmek"
+      },
+      {
+        "id": "u3-93",
+        "en": "slice",
+        "tr": "dilim, dilimlemek"
+      },
+      {
+        "id": "u3-94",
+        "en": "snack",
+        "tr": "atıştırmalık"
+      },
+      {
+        "id": "u3-95",
+        "en": "soup",
+        "tr": "çorba"
+      },
+      {
+        "id": "u3-96",
+        "en": "sour",
+        "tr": "ekşi"
+      },
+      {
+        "id": "u3-97",
+        "en": "spice",
+        "tr": "baharat"
+      },
+      {
+        "id": "u3-98",
+        "en": "spicy",
+        "tr": "baharatlı"
+      },
+      {
+        "id": "u3-99",
+        "en": "spoon",
+        "tr": "kaşık"
+      },
+      {
+        "id": "u3-100",
+        "en": "spread",
+        "tr": "sürmek"
+      },
+      {
+        "id": "u3-101",
+        "en": "steak",
+        "tr": "biftek, et"
+      },
+      {
+        "id": "u3-102",
+        "en": "step",
+        "tr": "adım"
+      },
+      {
+        "id": "u3-103",
+        "en": "strainer",
+        "tr": "süzgeç"
+      },
+      {
+        "id": "u3-104",
+        "en": "sugar",
+        "tr": "toz şeker"
+      },
+      {
+        "id": "u3-105",
+        "en": "sweet",
+        "tr": "tatlı"
+      },
+      {
+        "id": "u3-106",
+        "en": "tablespoon",
+        "tr": "yemek kaşığı"
+      },
+      {
+        "id": "u3-107",
+        "en": "taste",
+        "tr": "tadına bakmak"
+      },
+      {
+        "id": "u3-108",
+        "en": "tasty",
+        "tr": "lezzetli"
+      },
+      {
+        "id": "u3-109",
+        "en": "teaspoon",
+        "tr": "çay kaşığı"
+      },
+      {
+        "id": "u3-110",
+        "en": "then",
+        "tr": "sonra"
+      },
+      {
+        "id": "u3-111",
+        "en": "traditional",
+        "tr": "geleneksel"
+      },
+      {
+        "id": "u3-112",
+        "en": "tray",
+        "tr": "tepsi"
+      },
+      {
+        "id": "u3-113",
+        "en": "try",
+        "tr": "denemek"
+      },
+      {
+        "id": "u3-114",
+        "en": "unhealthy",
+        "tr": "sağlıksız"
+      },
+      {
+        "id": "u3-115",
+        "en": "until",
+        "tr": "...e kadar"
+      },
+      {
+        "id": "u3-116",
+        "en": "vegetable",
+        "tr": "sebze"
+      },
+      {
+        "id": "u3-117",
+        "en": "walnut",
+        "tr": "ceviz"
+      },
+      {
+        "id": "u3-118",
+        "en": "warm",
+        "tr": "ılık, sıcak"
+      },
+      {
+        "id": "u3-119",
+        "en": "wash",
+        "tr": "yıkamak"
+      },
+      {
+        "id": "u3-120",
+        "en": "whisk",
+        "tr": "çırpmak, çırpma teli"
+      },
+      {
+        "id": "u3-121",
+        "en": "yeast",
+        "tr": "maya"
+      },
+      {
+        "id": "u3-122",
+        "en": "yummy",
+        "tr": "enfes, nefis"
+      },
+      {
+        "id": "u3-123",
+        "en": "bean",
+        "tr": "fasulye"
+      },
+      {
+        "id": "u3-124",
+        "en": "breadcrumb",
+        "tr": "ekmek kırıntısı"
+      },
+      {
+        "id": "u3-125",
+        "en": "celery",
+        "tr": "kereviz"
+      },
+      {
+        "id": "u3-126",
+        "en": "coconut powder",
+        "tr": "hindistan cevizi tozu"
+      },
+      {
+        "id": "u3-127",
+        "en": "coriander",
+        "tr": "kişniş"
+      },
+      {
+        "id": "u3-128",
+        "en": "cucumber",
+        "tr": "salatalık"
+      },
+      {
+        "id": "u3-129",
+        "en": "garlic",
+        "tr": "sarımsak"
+      },
+      {
+        "id": "u3-130",
+        "en": "nuts",
+        "tr": "fındık"
+      },
+      {
+        "id": "u3-131",
+        "en": "phyllo",
+        "tr": "yufka"
+      },
+      {
+        "id": "u3-132",
+        "en": "powdered sugar",
+        "tr": "pudra şekeri"
+      },
+      {
+        "id": "u3-133",
+        "en": "prawns",
+        "tr": "karides"
+      },
+      {
+        "id": "u3-134",
+        "en": "rice flour",
+        "tr": "pirinç unu"
+      },
+      {
+        "id": "u3-135",
+        "en": "starch",
+        "tr": "nişasta"
+      },
+      {
+        "id": "u3-136",
+        "en": "black pepper",
+        "tr": "kara biber"
+      },
+      {
+        "id": "u3-137",
+        "en": "cardamom powder",
+        "tr": "kakule tozu"
+      },
+      {
+        "id": "u3-138",
+        "en": "chilli pepper",
+        "tr": "kırmızı biber"
+      },
+      {
+        "id": "u3-139",
+        "en": "cinnamon",
+        "tr": "tarçın"
+      },
+      {
+        "id": "u3-140",
+        "en": "cumin",
+        "tr": "kimyon"
+      },
+      {
+        "id": "u3-141",
+        "en": "ginger",
+        "tr": "zencefil"
+      },
+      {
+        "id": "u3-142",
+        "en": "steam",
+        "tr": "buharda pişirmek"
+      },
+      {
+        "id": "u3-143",
+        "en": "roast",
+        "tr": "fırında pişirmek (et, tavuk)"
+      },
+      {
+        "id": "u3-144",
+        "en": "fatty",
+        "tr": "yağlı"
+      },
+      {
+        "id": "u3-145",
+        "en": "greasy",
+        "tr": "yağlı"
+      },
+      {
+        "id": "u3-146",
+        "en": "milky",
+        "tr": "sütlü"
+      },
+      {
+        "id": "u3-147",
+        "en": "bon appetit",
+        "tr": "afiyet olsun"
+      },
+      {
+        "id": "u3-148",
+        "en": "dough",
+        "tr": "hamur"
+      },
+      {
+        "id": "u3-149",
+        "en": "experience",
+        "tr": "deneyim, tecrübe"
+      },
+      {
+        "id": "u3-150",
+        "en": "mealball",
+        "tr": "köfte"
+      },
+      {
+        "id": "u3-151",
+        "en": "pancake",
+        "tr": "pankek, krep"
+      },
+      {
+        "id": "u3-152",
+        "en": "piece",
+        "tr": "parça"
+      },
+      {
+        "id": "u3-153",
+        "en": "preheated",
+        "tr": "önceden ısıtılmış"
+      },
+      {
+        "id": "u3-154",
+        "en": "preparation",
+        "tr": "hazırlık"
+      },
+      {
+        "id": "u3-155",
+        "en": "sweet tooth",
+        "tr": "tatlıya düşkün"
+      },
+      {
+        "id": "u3-156",
+        "en": "syrup",
+        "tr": "şerbet"
+      },
+      {
+        "id": "u3-157",
+        "en": "bottle",
+        "tr": "şişe"
+      },
+      {
+        "id": "u3-158",
+        "en": "cooker",
+        "tr": "ocak"
+      },
+      {
+        "id": "u3-159",
+        "en": "fridge",
+        "tr": "buzdolabı"
+      },
+      {
+        "id": "u3-160",
+        "en": "peeler",
+        "tr": "sebze soyacağı"
+      },
+      {
+        "id": "u3-161",
+        "en": "pot",
+        "tr": "tencere"
+      },
+      {
+        "id": "u3-162",
+        "en": "refrigerator",
+        "tr": "buzdolabı"
+      },
+      {
+        "id": "u3-163",
+        "en": "rolling pin",
+        "tr": "merdane, oklava"
+      },
+      {
+        "id": "u3-164",
+        "en": "brush",
+        "tr": "fırça ile sürmek"
+      },
+      {
+        "id": "u3-165",
+        "en": "drain",
+        "tr": "süzmek"
+      },
+      {
+        "id": "u3-166",
+        "en": "rinse",
+        "tr": "yıkamak"
+      },
+      {
+        "id": "u3-167",
+        "en": "roll",
+        "tr": "yuvarlamak"
+      },
+      {
+        "id": "u3-168",
+        "en": "scoop",
+        "tr": "kepçe ile dökmek"
+      },
+      {
+        "id": "u3-169",
+        "en": "season",
+        "tr": "baharat katmak"
+      },
+      {
+        "id": "u3-170",
+        "en": "shake",
+        "tr": "çalkalamak"
+      },
+      {
+        "id": "u3-171",
+        "en": "shape",
+        "tr": "şekil vermek"
+      },
+      {
+        "id": "u3-172",
+        "en": "sprinkle",
+        "tr": "serpmek"
+      },
+      {
+        "id": "u3-173",
+        "en": "squeeze",
+        "tr": "suyunu sıkmak"
+      },
+      {
+        "id": "u3-174",
+        "en": "stir",
+        "tr": "karıştırmak (çorba, çay)"
+      },
+      {
+        "id": "u3-175",
+        "en": "wrap",
+        "tr": "sarmak, örtmek"
+      }
+    ]
+  },
+  {
+    "unit": 4,
+    "title": "On The Phone",
+    "words": [
+      {
+        "id": "u4-1",
+        "en": "account",
+        "tr": "hesap"
+      },
+      {
+        "id": "u4-2",
+        "en": "again",
+        "tr": "tekrar"
+      },
+      {
+        "id": "u4-3",
+        "en": "answer",
+        "tr": "yanıtlamak"
+      },
+      {
+        "id": "u4-4",
+        "en": "appetiser",
+        "tr": "meze"
+      },
+      {
+        "id": "u4-5",
+        "en": "application",
+        "tr": "telefon uygulaması"
+      },
+      {
+        "id": "u4-6",
+        "en": "appointment",
+        "tr": "randevu"
+      },
+      {
+        "id": "u4-7",
+        "en": "appreciate",
+        "tr": "takdir etmek"
+      },
+      {
+        "id": "u4-8",
+        "en": "as soon as possible",
+        "tr": "mümkün olan en kısa sürede"
+      },
+      {
+        "id": "u4-9",
+        "en": "available",
+        "tr": "müsait"
+      },
+      {
+        "id": "u4-10",
+        "en": "bad line",
+        "tr": "kötü hat, cızırtılı hat"
+      },
+      {
+        "id": "u4-11",
+        "en": "beg your pardon",
+        "tr": "kusura bakmayın"
+      },
+      {
+        "id": "u4-12",
+        "en": "book",
+        "tr": "yer ayırtmak"
+      },
+      {
+        "id": "u4-13",
+        "en": "call",
+        "tr": "arama, çağrı (telefon)"
+      },
+      {
+        "id": "u4-14",
+        "en": "call back",
+        "tr": "geri aramak"
+      },
+      {
+        "id": "u4-15",
+        "en": "caller",
+        "tr": "arayan"
+      },
+      {
+        "id": "u4-16",
+        "en": "check",
+        "tr": "kontrol etmek"
+      },
+      {
+        "id": "u4-17",
+        "en": "communicate",
+        "tr": "iletişim kurmak"
+      },
+      {
+        "id": "u4-18",
+        "en": "communication",
+        "tr": "iletişim"
+      },
+      {
+        "id": "u4-19",
+        "en": "company",
+        "tr": "şirket"
+      },
+      {
+        "id": "u4-20",
+        "en": "complain",
+        "tr": "şikayet etmek"
+      },
+      {
+        "id": "u4-21",
+        "en": "confirm",
+        "tr": "onaylamak"
+      },
+      {
+        "id": "u4-22",
+        "en": "connect",
+        "tr": "bağlanmak"
+      },
+      {
+        "id": "u4-23",
+        "en": "connection",
+        "tr": "bağlantı"
+      },
+      {
+        "id": "u4-24",
+        "en": "contact",
+        "tr": "iletişim kurmak"
+      },
+      {
+        "id": "u4-25",
+        "en": "conversation",
+        "tr": "görüşme"
+      },
+      {
+        "id": "u4-26",
+        "en": "cost",
+        "tr": "maliyet, fiyat"
+      },
+      {
+        "id": "u4-27",
+        "en": "customer",
+        "tr": "müşteri"
+      },
+      {
+        "id": "u4-28",
+        "en": "deliver",
+        "tr": "iletmek, teslim etmek"
+      },
+      {
+        "id": "u4-29",
+        "en": "delivery",
+        "tr": "gönderi"
+      },
+      {
+        "id": "u4-30",
+        "en": "dial",
+        "tr": "çevirmek, tuşlamak (numarayı)"
+      },
+      {
+        "id": "u4-31",
+        "en": "emergency",
+        "tr": "acil durum"
+      },
+      {
+        "id": "u4-32",
+        "en": "engaged",
+        "tr": "meşgul"
+      },
+      {
+        "id": "u4-33",
+        "en": "extension",
+        "tr": "dahili hat, iç hat"
+      },
+      {
+        "id": "u4-34",
+        "en": "face to face",
+        "tr": "yüz yüze"
+      },
+      {
+        "id": "u4-35",
+        "en": "find",
+        "tr": "bulmak"
+      },
+      {
+        "id": "u4-36",
+        "en": "foreign language",
+        "tr": "yabancı dil"
+      },
+      {
+        "id": "u4-37",
+        "en": "giving a reason",
+        "tr": "sebep göstermek"
+      },
+      {
+        "id": "u4-38",
+        "en": "hang on",
+        "tr": "beklemek"
+      },
+      {
+        "id": "u4-39",
+        "en": "hang up",
+        "tr": "telefonu kapatmak"
+      },
+      {
+        "id": "u4-40",
+        "en": "hear",
+        "tr": "işitmek"
+      },
+      {
+        "id": "u4-41",
+        "en": "hold on",
+        "tr": "beklemek"
+      },
+      {
+        "id": "u4-42",
+        "en": "in cash",
+        "tr": "nakit"
+      },
+      {
+        "id": "u4-43",
+        "en": "keep in touch",
+        "tr": "iletişim kurmak, görüşmek"
+      },
+      {
+        "id": "u4-44",
+        "en": "later",
+        "tr": "sonra"
+      },
+      {
+        "id": "u4-45",
+        "en": "learn",
+        "tr": "öğrenmek"
+      },
+      {
+        "id": "u4-46",
+        "en": "leave a message",
+        "tr": "mesaj bırakmak"
+      },
+      {
+        "id": "u4-47",
+        "en": "letter",
+        "tr": "mektup"
+      },
+      {
+        "id": "u4-48",
+        "en": "line",
+        "tr": "hat"
+      },
+      {
+        "id": "u4-49",
+        "en": "memo",
+        "tr": "not, bildiri"
+      },
+      {
+        "id": "u4-50",
+        "en": "moment",
+        "tr": "an, dakika"
+      },
+      {
+        "id": "u4-51",
+        "en": "news",
+        "tr": "haberler"
+      },
+      {
+        "id": "u4-52",
+        "en": "order",
+        "tr": "sipariş etmek"
+      },
+      {
+        "id": "u4-53",
+        "en": "pastry",
+        "tr": "hamur işi, pasta"
+      },
+      {
+        "id": "u4-54",
+        "en": "phone",
+        "tr": "telefon"
+      },
+      {
+        "id": "u4-55",
+        "en": "pick up",
+        "tr": "telefonu açmak"
+      },
+      {
+        "id": "u4-56",
+        "en": "preference",
+        "tr": "tercih"
+      },
+      {
+        "id": "u4-57",
+        "en": "purpose",
+        "tr": "amaç"
+      },
+      {
+        "id": "u4-58",
+        "en": "put through",
+        "tr": "aktarmak, telefonu bağlamak"
+      },
+      {
+        "id": "u4-59",
+        "en": "receipt",
+        "tr": "fiş"
+      },
+      {
+        "id": "u4-60",
+        "en": "recommend",
+        "tr": "tavsiye etmek"
+      },
+      {
+        "id": "u4-61",
+        "en": "refund",
+        "tr": "geri ödemek"
+      },
+      {
+        "id": "u4-62",
+        "en": "repeat",
+        "tr": "tekrar etmek"
+      },
+      {
+        "id": "u4-63",
+        "en": "report",
+        "tr": "bildirmek"
+      },
+      {
+        "id": "u4-64",
+        "en": "return",
+        "tr": "iade etmek"
+      },
+      {
+        "id": "u4-65",
+        "en": "reward",
+        "tr": "ödül"
+      },
+      {
+        "id": "u4-66",
+        "en": "ring",
+        "tr": "telefonun çalması"
+      },
+      {
+        "id": "u4-67",
+        "en": "send",
+        "tr": "göndermek"
+      },
+      {
+        "id": "u4-68",
+        "en": "share",
+        "tr": "paylaşmak"
+      },
+      {
+        "id": "u4-69",
+        "en": "smartphone",
+        "tr": "akıllı telefon"
+      },
+      {
+        "id": "u4-70",
+        "en": "social network",
+        "tr": "sosyal ağ"
+      },
+      {
+        "id": "u4-71",
+        "en": "speak",
+        "tr": "konuşmak"
+      },
+      {
+        "id": "u4-72",
+        "en": "suggest",
+        "tr": "önermek"
+      },
+      {
+        "id": "u4-73",
+        "en": "talk",
+        "tr": "konuşmak"
+      },
+      {
+        "id": "u4-74",
+        "en": "telegraph",
+        "tr": "telgraf"
+      },
+      {
+        "id": "u4-75",
+        "en": "text message",
+        "tr": "kısa mesaj"
+      },
+      {
+        "id": "u4-76",
+        "en": "useful",
+        "tr": "faydalı"
+      },
+      {
+        "id": "u4-77",
+        "en": "wait",
+        "tr": "beklemek"
+      },
+      {
+        "id": "u4-78",
+        "en": "weather forecast",
+        "tr": "hava durumu, hava tahmini"
+      },
+      {
+        "id": "u4-79",
+        "en": "worth",
+        "tr": "değer, bedel"
+      }
+    ]
+  },
+  {
+    "unit": 5,
+    "title": "The Internet",
+    "words": [
+      {
+        "id": "u5-1",
+        "en": "account",
+        "tr": "hesap"
+      },
+      {
+        "id": "u5-2",
+        "en": "adult",
+        "tr": "yetişkin"
+      },
+      {
+        "id": "u5-3",
+        "en": "advantage",
+        "tr": "fayda, yarar"
+      },
+      {
+        "id": "u5-4",
+        "en": "adventure",
+        "tr": "macera"
+      },
+      {
+        "id": "u5-5",
+        "en": "application",
+        "tr": "uygulama"
+      },
+      {
+        "id": "u5-6",
+        "en": "arrangement",
+        "tr": "düzenleme, ayarlama"
+      },
+      {
+        "id": "u5-7",
+        "en": "attachment",
+        "tr": "ekli dosya, eklemek"
+      },
+      {
+        "id": "u5-8",
+        "en": "bill",
+        "tr": "fatura"
+      },
+      {
+        "id": "u5-9",
+        "en": "blogger",
+        "tr": "blog yazarı"
+      },
+      {
+        "id": "u5-10",
+        "en": "booking",
+        "tr": "rezervasyon, yer ayırtma"
+      },
+      {
+        "id": "u5-11",
+        "en": "broken",
+        "tr": "kesik, arızalı, bozuk"
+      },
+      {
+        "id": "u5-12",
+        "en": "browser",
+        "tr": "internet tarayıcısı"
+      },
+      {
+        "id": "u5-13",
+        "en": "careful",
+        "tr": "dikkatli"
+      },
+      {
+        "id": "u5-14",
+        "en": "chat",
+        "tr": "sohbet"
+      },
+      {
+        "id": "u5-15",
+        "en": "check",
+        "tr": "kontrol etmek"
+      },
+      {
+        "id": "u5-16",
+        "en": "click",
+        "tr": "tıklamak"
+      },
+      {
+        "id": "u5-17",
+        "en": "comment",
+        "tr": "yorum"
+      },
+      {
+        "id": "u5-18",
+        "en": "communicate",
+        "tr": "iletişim kurmak"
+      },
+      {
+        "id": "u5-19",
+        "en": "communication",
+        "tr": "iletişim"
+      },
+      {
+        "id": "u5-20",
+        "en": "confirm",
+        "tr": "onaylamak"
+      },
+      {
+        "id": "u5-21",
+        "en": "connect",
+        "tr": "bağlanmak"
+      },
+      {
+        "id": "u5-22",
+        "en": "connection",
+        "tr": "bağlantı"
+      },
+      {
+        "id": "u5-23",
+        "en": "delete",
+        "tr": "silmek"
+      },
+      {
+        "id": "u5-24",
+        "en": "diary",
+        "tr": "günlük"
+      },
+      {
+        "id": "u5-25",
+        "en": "different",
+        "tr": "farklı"
+      },
+      {
+        "id": "u5-26",
+        "en": "download",
+        "tr": "bilgisayara indirmek"
+      },
+      {
+        "id": "u5-27",
+        "en": "education",
+        "tr": "eğitim"
+      },
+      {
+        "id": "u5-28",
+        "en": "express",
+        "tr": "ifade etmek"
+      },
+      {
+        "id": "u5-29",
+        "en": "file",
+        "tr": "dosya"
+      },
+      {
+        "id": "u5-30",
+        "en": "find",
+        "tr": "bulmak"
+      },
+      {
+        "id": "u5-31",
+        "en": "follow",
+        "tr": "takip etmek"
+      },
+      {
+        "id": "u5-32",
+        "en": "forget",
+        "tr": "unutmak"
+      },
+      {
+        "id": "u5-33",
+        "en": "habit",
+        "tr": "alışkanlık"
+      },
+      {
+        "id": "u5-34",
+        "en": "icon",
+        "tr": "ikon, simge"
+      },
+      {
+        "id": "u5-35",
+        "en": "important",
+        "tr": "önemli"
+      },
+      {
+        "id": "u5-36",
+        "en": "influencer",
+        "tr": "etki sahibi"
+      },
+      {
+        "id": "u5-37",
+        "en": "information",
+        "tr": "bilgi"
+      },
+      {
+        "id": "u5-38",
+        "en": "interested in",
+        "tr": "ilgili olmak"
+      },
+      {
+        "id": "u5-39",
+        "en": "join",
+        "tr": "katılmak"
+      },
+      {
+        "id": "u5-40",
+        "en": "learn language",
+        "tr": "dil öğrenmek"
+      },
+      {
+        "id": "u5-41",
+        "en": "letter",
+        "tr": "mektup / harf"
+      },
+      {
+        "id": "u5-42",
+        "en": "log in",
+        "tr": "giriş yapmak"
+      },
+      {
+        "id": "u5-43",
+        "en": "log on",
+        "tr": "oturum açmak"
+      },
+      {
+        "id": "u5-44",
+        "en": "mean",
+        "tr": "anlamına gelmek"
+      },
+      {
+        "id": "u5-45",
+        "en": "offline",
+        "tr": "çevrim dışı"
+      },
+      {
+        "id": "u5-46",
+        "en": "online",
+        "tr": "çevrimiçi"
+      },
+      {
+        "id": "u5-47",
+        "en": "opportunity",
+        "tr": "fırsat"
+      },
+      {
+        "id": "u5-48",
+        "en": "password",
+        "tr": "şifre"
+      },
+      {
+        "id": "u5-49",
+        "en": "pay",
+        "tr": "ödemek"
+      },
+      {
+        "id": "u5-50",
+        "en": "post",
+        "tr": "gönderi, ileti"
+      },
+      {
+        "id": "u5-51",
+        "en": "preferences",
+        "tr": "tercihler"
+      },
+      {
+        "id": "u5-52",
+        "en": "purpose",
+        "tr": "amaç, gaye"
+      },
+      {
+        "id": "u5-53",
+        "en": "register",
+        "tr": "kayıt olmak"
+      },
+      {
+        "id": "u5-54",
+        "en": "reply",
+        "tr": "yanıt, karşılık, cevap"
+      },
+      {
+        "id": "u5-55",
+        "en": "request",
+        "tr": "istek, rica"
+      },
+      {
+        "id": "u5-56",
+        "en": "research",
+        "tr": "araştırmak"
+      },
+      {
+        "id": "u5-57",
+        "en": "safety rules",
+        "tr": "güvenlik kuralları"
+      },
+      {
+        "id": "u5-58",
+        "en": "same",
+        "tr": "aynı"
+      },
+      {
+        "id": "u5-59",
+        "en": "screen",
+        "tr": "ekran"
+      },
+      {
+        "id": "u5-60",
+        "en": "search engine",
+        "tr": "arama motoru"
+      },
+      {
+        "id": "u5-61",
+        "en": "share",
+        "tr": "paylaşmak"
+      },
+      {
+        "id": "u5-62",
+        "en": "sign in",
+        "tr": "giriş yapmak"
+      },
+      {
+        "id": "u5-63",
+        "en": "sign up",
+        "tr": "kayıt olmak"
+      },
+      {
+        "id": "u5-64",
+        "en": "smartphone",
+        "tr": "akıllı telefon"
+      },
+      {
+        "id": "u5-65",
+        "en": "social networking site",
+        "tr": "sosyal ağ sitesi"
+      },
+      {
+        "id": "u5-66",
+        "en": "spend",
+        "tr": "harcamak"
+      },
+      {
+        "id": "u5-67",
+        "en": "story",
+        "tr": "hikaye, öykü"
+      },
+      {
+        "id": "u5-68",
+        "en": "stranger",
+        "tr": "yabancı"
+      },
+      {
+        "id": "u5-69",
+        "en": "text message",
+        "tr": "mesaj yazmak"
+      },
+      {
+        "id": "u5-70",
+        "en": "ticket",
+        "tr": "bilet"
+      },
+      {
+        "id": "u5-71",
+        "en": "travel",
+        "tr": "seyahat"
+      },
+      {
+        "id": "u5-72",
+        "en": "upload",
+        "tr": "internete yüklemek"
+      },
+      {
+        "id": "u5-73",
+        "en": "use",
+        "tr": "kullanmak"
+      },
+      {
+        "id": "u5-74",
+        "en": "waste",
+        "tr": "boşa harcamak"
+      },
+      {
+        "id": "u5-75",
+        "en": "website",
+        "tr": "internet sitesi"
+      }
+    ]
+  },
+  {
+    "unit": 6,
+    "title": "Adventures",
+    "words": [
+      {
+        "id": "u6-1",
+        "en": "adrenaline",
+        "tr": "adrenalin"
+      },
+      {
+        "id": "u6-2",
+        "en": "adventure",
+        "tr": "macera"
+      },
+      {
+        "id": "u6-3",
+        "en": "adventurer",
+        "tr": "maceracı"
+      },
+      {
+        "id": "u6-4",
+        "en": "adventurous",
+        "tr": "maceracı, maceraperest"
+      },
+      {
+        "id": "u6-5",
+        "en": "afraid",
+        "tr": "korkmak"
+      },
+      {
+        "id": "u6-6",
+        "en": "age",
+        "tr": "yaş"
+      },
+      {
+        "id": "u6-7",
+        "en": "air",
+        "tr": "hava"
+      },
+      {
+        "id": "u6-8",
+        "en": "amazing",
+        "tr": "harika, şaşırtıcı"
+      },
+      {
+        "id": "u6-9",
+        "en": "amusing",
+        "tr": "komik, eğlenceli"
+      },
+      {
+        "id": "u6-10",
+        "en": "archery",
+        "tr": "okçuluk"
+      },
+      {
+        "id": "u6-11",
+        "en": "balance",
+        "tr": "denge"
+      },
+      {
+        "id": "u6-12",
+        "en": "base jumping",
+        "tr": "temel atlama"
+      },
+      {
+        "id": "u6-13",
+        "en": "benefit",
+        "tr": "fayda, yarar"
+      },
+      {
+        "id": "u6-14",
+        "en": "board",
+        "tr": "kayak tahtası"
+      },
+      {
+        "id": "u6-15",
+        "en": "boat",
+        "tr": "bot, tekne"
+      },
+      {
+        "id": "u6-16",
+        "en": "boots",
+        "tr": "bot, çizme"
+      },
+      {
+        "id": "u6-17",
+        "en": "boxing",
+        "tr": "boks"
+      },
+      {
+        "id": "u6-18",
+        "en": "bungee-jumping",
+        "tr": "elastik ip ile yüksekten atlama"
+      },
+      {
+        "id": "u6-19",
+        "en": "canoeing",
+        "tr": "kano, sal ile gezinti"
+      },
+      {
+        "id": "u6-20",
+        "en": "careful",
+        "tr": "dikkatli"
+      },
+      {
+        "id": "u6-21",
+        "en": "caving",
+        "tr": "mağaracılık"
+      },
+      {
+        "id": "u6-22",
+        "en": "challenging",
+        "tr": "zorlu, meydan okuyucu"
+      },
+      {
+        "id": "u6-23",
+        "en": "climbing",
+        "tr": "tırmanma"
+      },
+      {
+        "id": "u6-24",
+        "en": "competition",
+        "tr": "yarışma"
+      },
+      {
+        "id": "u6-25",
+        "en": "country",
+        "tr": "ülke"
+      },
+      {
+        "id": "u6-26",
+        "en": "courage",
+        "tr": "cesaret"
+      },
+      {
+        "id": "u6-27",
+        "en": "creativity",
+        "tr": "yaratıcılık"
+      },
+      {
+        "id": "u6-28",
+        "en": "cycling",
+        "tr": "bisikletçilik, bisiklete binme"
+      },
+      {
+        "id": "u6-29",
+        "en": "dangerous",
+        "tr": "tehlikeli"
+      },
+      {
+        "id": "u6-30",
+        "en": "disappointing",
+        "tr": "hayal kırıklığına uğratıcı"
+      },
+      {
+        "id": "u6-31",
+        "en": "diving",
+        "tr": "dalış"
+      },
+      {
+        "id": "u6-32",
+        "en": "easy",
+        "tr": "kolay"
+      },
+      {
+        "id": "u6-33",
+        "en": "enjoy",
+        "tr": "hoşlanmak, keyif almak"
+      },
+      {
+        "id": "u6-34",
+        "en": "enjoyable",
+        "tr": "eğlenceli"
+      },
+      {
+        "id": "u6-35",
+        "en": "entertaining",
+        "tr": "eğlenceli"
+      },
+      {
+        "id": "u6-36",
+        "en": "equipment",
+        "tr": "araç gereç, ekipman"
+      },
+      {
+        "id": "u6-37",
+        "en": "exciting",
+        "tr": "heyecan verici"
+      },
+      {
+        "id": "u6-38",
+        "en": "exercise",
+        "tr": "egzersiz yapmak"
+      },
+      {
+        "id": "u6-39",
+        "en": "expensive",
+        "tr": "pahalı"
+      },
+      {
+        "id": "u6-40",
+        "en": "experience",
+        "tr": "deneyim, tecrübe"
+      },
+      {
+        "id": "u6-41",
+        "en": "extreme sport",
+        "tr": "tehlikeli ve heyecanlı spor"
+      },
+      {
+        "id": "u6-42",
+        "en": "fascinating",
+        "tr": "büyüleyici"
+      },
+      {
+        "id": "u6-43",
+        "en": "fast",
+        "tr": "hızlı"
+      },
+      {
+        "id": "u6-44",
+        "en": "fly",
+        "tr": "uçmak"
+      },
+      {
+        "id": "u6-45",
+        "en": "frightening",
+        "tr": "korkutucu"
+      },
+      {
+        "id": "u6-46",
+        "en": "gloves",
+        "tr": "eldivenler"
+      },
+      {
+        "id": "u6-47",
+        "en": "goggles",
+        "tr": "koruyucu gözlük"
+      },
+      {
+        "id": "u6-48",
+        "en": "hang-gliding",
+        "tr": "delta kanatla uçuş"
+      },
+      {
+        "id": "u6-49",
+        "en": "height",
+        "tr": "yükseklik"
+      },
+      {
+        "id": "u6-50",
+        "en": "helmet",
+        "tr": "kask"
+      },
+      {
+        "id": "u6-51",
+        "en": "highlining",
+        "tr": "ip üstünde yürüme"
+      },
+      {
+        "id": "u6-52",
+        "en": "ice climbing",
+        "tr": "buz tırmanışı"
+      },
+      {
+        "id": "u6-53",
+        "en": "ice skating",
+        "tr": "buz pateni"
+      },
+      {
+        "id": "u6-54",
+        "en": "improve",
+        "tr": "geliştirmek"
+      },
+      {
+        "id": "u6-55",
+        "en": "indoor",
+        "tr": "kapalı mekan, iç mekan"
+      },
+      {
+        "id": "u6-56",
+        "en": "interested in",
+        "tr": "ilgili olmak"
+      },
+      {
+        "id": "u6-57",
+        "en": "interesting",
+        "tr": "ilginç"
+      },
+      {
+        "id": "u6-58",
+        "en": "international",
+        "tr": "uluslar arası"
+      },
+      {
+        "id": "u6-59",
+        "en": "jogging",
+        "tr": "tempolu yürüyüş"
+      },
+      {
+        "id": "u6-60",
+        "en": "kayaking",
+        "tr": "kanoya benzer bir su sporu"
+      },
+      {
+        "id": "u6-61",
+        "en": "lake",
+        "tr": "göl"
+      },
+      {
+        "id": "u6-62",
+        "en": "less",
+        "tr": "daha az"
+      },
+      {
+        "id": "u6-63",
+        "en": "medal",
+        "tr": "madalya"
+      },
+      {
+        "id": "u6-64",
+        "en": "more",
+        "tr": "daha fazla"
+      },
+      {
+        "id": "u6-65",
+        "en": "motor racing",
+        "tr": "motor yarışı"
+      },
+      {
+        "id": "u6-66",
+        "en": "mountain biking",
+        "tr": "dağ bisikleti"
+      },
+      {
+        "id": "u6-67",
+        "en": "nature",
+        "tr": "doğa"
+      },
+      {
+        "id": "u6-68",
+        "en": "need",
+        "tr": "ihtiyaç duymak"
+      },
+      {
+        "id": "u6-69",
+        "en": "outdoor",
+        "tr": "açık alan, dış mekan"
+      },
+      {
+        "id": "u6-70",
+        "en": "paddle",
+        "tr": "kürek"
+      },
+      {
+        "id": "u6-71",
+        "en": "paragliding",
+        "tr": "yamaç paraşütü"
+      },
+      {
+        "id": "u6-72",
+        "en": "prefer",
+        "tr": "tercih etmek"
+      },
+      {
+        "id": "u6-73",
+        "en": "rafting",
+        "tr": "bot ile yapılan su sporu"
+      },
+      {
+        "id": "u6-74",
+        "en": "regularly",
+        "tr": "düzenli olarak"
+      },
+      {
+        "id": "u6-75",
+        "en": "require",
+        "tr": "gerektirmek"
+      },
+      {
+        "id": "u6-76",
+        "en": "river",
+        "tr": "akarsu, nehir"
+      },
+      {
+        "id": "u6-77",
+        "en": "rock climbing",
+        "tr": "kaya tırmanışı"
+      },
+      {
+        "id": "u6-78",
+        "en": "rollerblading",
+        "tr": "patenle kayma"
+      },
+      {
+        "id": "u6-79",
+        "en": "rope",
+        "tr": "halat, ip"
+      },
+      {
+        "id": "u6-80",
+        "en": "running",
+        "tr": "koşu"
+      },
+      {
+        "id": "u6-81",
+        "en": "safe",
+        "tr": "güvenli"
+      },
+      {
+        "id": "u6-82",
+        "en": "scuba diving",
+        "tr": "su altı dalışı, tüplü dalış"
+      },
+      {
+        "id": "u6-83",
+        "en": "sea",
+        "tr": "deniz"
+      },
+      {
+        "id": "u6-84",
+        "en": "skateboarding",
+        "tr": "kaykay yapmak"
+      },
+      {
+        "id": "u6-85",
+        "en": "skiing",
+        "tr": "kar kayağı"
+      },
+      {
+        "id": "u6-86",
+        "en": "skydiving",
+        "tr": "gökyüzü dalışı"
+      },
+      {
+        "id": "u6-87",
+        "en": "slide",
+        "tr": "kaymak"
+      },
+      {
+        "id": "u6-88",
+        "en": "snowboard",
+        "tr": "kar kayağı (tahta üzerinde)"
+      },
+      {
+        "id": "u6-89",
+        "en": "successful",
+        "tr": "başarılı"
+      },
+      {
+        "id": "u6-90",
+        "en": "swimming",
+        "tr": "yüzme"
+      },
+      {
+        "id": "u6-91",
+        "en": "take risks",
+        "tr": "risk almak"
+      },
+      {
+        "id": "u6-92",
+        "en": "talented",
+        "tr": "yetenekli"
+      },
+      {
+        "id": "u6-93",
+        "en": "thrilling",
+        "tr": "heyecan verici"
+      },
+      {
+        "id": "u6-94",
+        "en": "train",
+        "tr": "antrenman yapmak"
+      },
+      {
+        "id": "u6-95",
+        "en": "training",
+        "tr": "antrenman"
+      },
+      {
+        "id": "u6-96",
+        "en": "unforgettable",
+        "tr": "unutulmaz"
+      },
+      {
+        "id": "u6-97",
+        "en": "volcano surfing",
+        "tr": "volkan sörfü"
+      },
+      {
+        "id": "u6-98",
+        "en": "wind surfing",
+        "tr": "rüzgar sörfü"
+      },
+      {
+        "id": "u6-99",
+        "en": "winter",
+        "tr": "kış"
+      },
+      {
+        "id": "u6-100",
+        "en": "wrestling",
+        "tr": "güreş"
+      },
+      {
+        "id": "u6-101",
+        "en": "zorbing",
+        "tr": "plastik küre içinde yuvarlanma"
+      }
+    ]
+  },
+  {
+    "unit": 7,
+    "title": "Tourism",
+    "words": [
+      {
+        "id": "u7-1",
+        "en": "abroad",
+        "tr": "yurt dışı"
+      },
+      {
+        "id": "u7-2",
+        "en": "accommodation",
+        "tr": "konaklama, kalacak yer"
+      },
+      {
+        "id": "u7-3",
+        "en": "all-inclusive",
+        "tr": "her şey dahil"
+      },
+      {
+        "id": "u7-4",
+        "en": "amazing",
+        "tr": "inanılmaz, şaşırtıcı"
+      },
+      {
+        "id": "u7-5",
+        "en": "amphitheater",
+        "tr": "amfitiyatro"
+      },
+      {
+        "id": "u7-6",
+        "en": "ancient",
+        "tr": "antik"
+      },
+      {
+        "id": "u7-7",
+        "en": "architecture",
+        "tr": "mimari"
+      },
+      {
+        "id": "u7-8",
+        "en": "attraction",
+        "tr": "gezip görülmek istenen yer"
+      },
+      {
+        "id": "u7-9",
+        "en": "attractive",
+        "tr": "çekici, cezbedici"
+      },
+      {
+        "id": "u7-10",
+        "en": "bazaar",
+        "tr": "çarşı, pazar"
+      },
+      {
+        "id": "u7-11",
+        "en": "beach",
+        "tr": "kumsal, sahil"
+      },
+      {
+        "id": "u7-12",
+        "en": "bed and breakfast",
+        "tr": "yatak kahvaltı (konaklama)"
+      },
+      {
+        "id": "u7-13",
+        "en": "been",
+        "tr": "bulunmak"
+      },
+      {
+        "id": "u7-14",
+        "en": "boat tour",
+        "tr": "tekne turu"
+      },
+      {
+        "id": "u7-15",
+        "en": "Bosphorus",
+        "tr": "İstanbul Boğazı"
+      },
+      {
+        "id": "u7-16",
+        "en": "bridge",
+        "tr": "köprü"
+      },
+      {
+        "id": "u7-17",
+        "en": "budget",
+        "tr": "bütçe"
+      },
+      {
+        "id": "u7-18",
+        "en": "bungalow",
+        "tr": "tek katlı tahta ev"
+      },
+      {
+        "id": "u7-19",
+        "en": "camel",
+        "tr": "deve"
+      },
+      {
+        "id": "u7-20",
+        "en": "castle",
+        "tr": "kale"
+      },
+      {
+        "id": "u7-21",
+        "en": "cave",
+        "tr": "mağara"
+      },
+      {
+        "id": "u7-22",
+        "en": "centre",
+        "tr": "merkez"
+      },
+      {
+        "id": "u7-23",
+        "en": "climate",
+        "tr": "iklim"
+      },
+      {
+        "id": "u7-24",
+        "en": "continent",
+        "tr": "kıta"
+      },
+      {
+        "id": "u7-25",
+        "en": "countryside",
+        "tr": "kırsal kesim"
+      },
+      {
+        "id": "u7-26",
+        "en": "cultural",
+        "tr": "kültürel"
+      },
+      {
+        "id": "u7-27",
+        "en": "culture",
+        "tr": "kültür"
+      },
+      {
+        "id": "u7-28",
+        "en": "delicious",
+        "tr": "lezzetli"
+      },
+      {
+        "id": "u7-29",
+        "en": "desert",
+        "tr": "çöl"
+      },
+      {
+        "id": "u7-30",
+        "en": "destination",
+        "tr": "varış yeri"
+      },
+      {
+        "id": "u7-31",
+        "en": "different",
+        "tr": "farklı"
+      },
+      {
+        "id": "u7-32",
+        "en": "dishes",
+        "tr": "yemekler"
+      },
+      {
+        "id": "u7-33",
+        "en": "east",
+        "tr": "doğu"
+      },
+      {
+        "id": "u7-34",
+        "en": "Ephesus",
+        "tr": "Efes antik kenti"
+      },
+      {
+        "id": "u7-35",
+        "en": "ever",
+        "tr": "hiç?"
+      },
+      {
+        "id": "u7-36",
+        "en": "expensive",
+        "tr": "pahalı"
+      },
+      {
+        "id": "u7-37",
+        "en": "explore",
+        "tr": "keşfetmek"
+      },
+      {
+        "id": "u7-38",
+        "en": "Fairy Chimneys",
+        "tr": "Peri Bacaları"
+      },
+      {
+        "id": "u7-39",
+        "en": "famous",
+        "tr": "ünlü"
+      },
+      {
+        "id": "u7-40",
+        "en": "fascinating",
+        "tr": "büyüleyici"
+      },
+      {
+        "id": "u7-41",
+        "en": "fountain",
+        "tr": "çeşme, fıskiye"
+      },
+      {
+        "id": "u7-42",
+        "en": "heritage",
+        "tr": "miras"
+      },
+      {
+        "id": "u7-43",
+        "en": "historic site",
+        "tr": "tarihi yer"
+      },
+      {
+        "id": "u7-44",
+        "en": "historical",
+        "tr": "tarihi"
+      },
+      {
+        "id": "u7-45",
+        "en": "history",
+        "tr": "tarih"
+      },
+      {
+        "id": "u7-46",
+        "en": "holiday",
+        "tr": "tatil"
+      },
+      {
+        "id": "u7-47",
+        "en": "hostel",
+        "tr": "pansiyon"
+      },
+      {
+        "id": "u7-48",
+        "en": "important",
+        "tr": "önemli"
+      },
+      {
+        "id": "u7-49",
+        "en": "incredible",
+        "tr": "inanılmaz"
+      },
+      {
+        "id": "u7-50",
+        "en": "interested in",
+        "tr": "ilgili olmak"
+      },
+      {
+        "id": "u7-51",
+        "en": "journey",
+        "tr": "seyahat"
+      },
+      {
+        "id": "u7-52",
+        "en": "landmark",
+        "tr": "şehrin simgesi"
+      },
+      {
+        "id": "u7-53",
+        "en": "landscape",
+        "tr": "manzara"
+      },
+      {
+        "id": "u7-54",
+        "en": "local dishes",
+        "tr": "yerel yemekler"
+      },
+      {
+        "id": "u7-55",
+        "en": "location",
+        "tr": "konum"
+      },
+      {
+        "id": "u7-56",
+        "en": "monument",
+        "tr": "anıt, abide"
+      },
+      {
+        "id": "u7-57",
+        "en": "mosque",
+        "tr": "cami"
+      },
+      {
+        "id": "u7-58",
+        "en": "museum",
+        "tr": "müze"
+      },
+      {
+        "id": "u7-59",
+        "en": "national park",
+        "tr": "milli park"
+      },
+      {
+        "id": "u7-60",
+        "en": "north",
+        "tr": "kuzey"
+      },
+      {
+        "id": "u7-61",
+        "en": "overseas",
+        "tr": "denizaşırı"
+      },
+      {
+        "id": "u7-62",
+        "en": "palace",
+        "tr": "saray"
+      },
+      {
+        "id": "u7-63",
+        "en": "perfect",
+        "tr": "harika"
+      },
+      {
+        "id": "u7-64",
+        "en": "plane",
+        "tr": "uçak"
+      },
+      {
+        "id": "u7-65",
+        "en": "price",
+        "tr": "ücret, fiyat"
+      },
+      {
+        "id": "u7-66",
+        "en": "product",
+        "tr": "ürün"
+      },
+      {
+        "id": "u7-67",
+        "en": "rent",
+        "tr": "kiralamak"
+      },
+      {
+        "id": "u7-68",
+        "en": "resort",
+        "tr": "tatil yeri, tatil köyü"
+      },
+      {
+        "id": "u7-69",
+        "en": "rural",
+        "tr": "kırsal"
+      },
+      {
+        "id": "u7-70",
+        "en": "scenery",
+        "tr": "manzara"
+      },
+      {
+        "id": "u7-71",
+        "en": "ship",
+        "tr": "gemi"
+      },
+      {
+        "id": "u7-72",
+        "en": "sightseeing tour",
+        "tr": "gezi turu"
+      },
+      {
+        "id": "u7-73",
+        "en": "south",
+        "tr": "güney"
+      },
+      {
+        "id": "u7-74",
+        "en": "souvenir",
+        "tr": "hediyelik eşya"
+      },
+      {
+        "id": "u7-75",
+        "en": "square",
+        "tr": "meydan"
+      },
+      {
+        "id": "u7-76",
+        "en": "stay",
+        "tr": "kalmak, konaklamak"
+      },
+      {
+        "id": "u7-77",
+        "en": "sunset",
+        "tr": "gün batımı"
+      },
+      {
+        "id": "u7-78",
+        "en": "taste",
+        "tr": "tatmak, tadına bakmak"
+      },
+      {
+        "id": "u7-79",
+        "en": "temple",
+        "tr": "tapınak, mâbet"
+      },
+      {
+        "id": "u7-80",
+        "en": "tiles",
+        "tr": "fayans"
+      },
+      {
+        "id": "u7-81",
+        "en": "tower",
+        "tr": "kule"
+      },
+      {
+        "id": "u7-82",
+        "en": "tradition",
+        "tr": "gelenek"
+      },
+      {
+        "id": "u7-83",
+        "en": "traditional",
+        "tr": "geleneksel"
+      },
+      {
+        "id": "u7-84",
+        "en": "train",
+        "tr": "tren"
+      },
+      {
+        "id": "u7-85",
+        "en": "transportation",
+        "tr": "ulaşım"
+      },
+      {
+        "id": "u7-86",
+        "en": "travel",
+        "tr": "seyahat etmek, yolculuk"
+      },
+      {
+        "id": "u7-87",
+        "en": "trip",
+        "tr": "gezi, seyahat"
+      },
+      {
+        "id": "u7-88",
+        "en": "try",
+        "tr": "denemek"
+      },
+      {
+        "id": "u7-89",
+        "en": "urban",
+        "tr": "şehirsel, kentsel"
+      },
+      {
+        "id": "u7-90",
+        "en": "vacation",
+        "tr": "tatil"
+      },
+      {
+        "id": "u7-91",
+        "en": "visit",
+        "tr": "ziyaret etmek"
+      },
+      {
+        "id": "u7-92",
+        "en": "weather",
+        "tr": "hava"
+      },
+      {
+        "id": "u7-93",
+        "en": "west",
+        "tr": "batı"
+      }
+    ]
+  },
+  {
+    "unit": 8,
+    "title": "Chores",
+    "words": [
+      {
+        "id": "u8-1",
+        "en": "annoyed",
+        "tr": "sinirli, kızgın"
+      },
+      {
+        "id": "u8-2",
+        "en": "arrive on time",
+        "tr": "zamanında varmak"
+      },
+      {
+        "id": "u8-3",
+        "en": "bored",
+        "tr": "sıkılmış"
+      },
+      {
+        "id": "u8-4",
+        "en": "borrow",
+        "tr": "ödünç almak"
+      },
+      {
+        "id": "u8-5",
+        "en": "break promise",
+        "tr": "sözünü tutmamak"
+      },
+      {
+        "id": "u8-6",
+        "en": "break the rules",
+        "tr": "kurallara uymamak"
+      },
+      {
+        "id": "u8-7",
+        "en": "can't stand",
+        "tr": "tahammül edememek"
+      },
+      {
+        "id": "u8-8",
+        "en": "chores",
+        "tr": "ev işleri"
+      },
+      {
+        "id": "u8-9",
+        "en": "clean the windows",
+        "tr": "camları silmek"
+      },
+      {
+        "id": "u8-10",
+        "en": "clean up",
+        "tr": "temizlemek, toparlamak"
+      },
+      {
+        "id": "u8-11",
+        "en": "cook",
+        "tr": "yemek pişirmek"
+      },
+      {
+        "id": "u8-12",
+        "en": "dirty",
+        "tr": "kirli"
+      },
+      {
+        "id": "u8-13",
+        "en": "disturb",
+        "tr": "rahatsız etmek"
+      },
+      {
+        "id": "u8-14",
+        "en": "do the ironing",
+        "tr": "ütü yapmak"
+      },
+      {
+        "id": "u8-15",
+        "en": "do the laundry",
+        "tr": "çamaşır yıkamak"
+      },
+      {
+        "id": "u8-16",
+        "en": "do the shopping",
+        "tr": "alışveriş yapmak"
+      },
+      {
+        "id": "u8-17",
+        "en": "dry the dishes",
+        "tr": "tabakları kurulamak"
+      },
+      {
+        "id": "u8-18",
+        "en": "dust the furniture",
+        "tr": "mobilyaların tozunu almak"
+      },
+      {
+        "id": "u8-19",
+        "en": "duty",
+        "tr": "görev"
+      },
+      {
+        "id": "u8-20",
+        "en": "empty the dishwasher",
+        "tr": "bulaşık makinesini boşaltmak"
+      },
+      {
+        "id": "u8-21",
+        "en": "exhausted",
+        "tr": "yorgun, bitkin"
+      },
+      {
+        "id": "u8-22",
+        "en": "feel",
+        "tr": "hissetmek"
+      },
+      {
+        "id": "u8-23",
+        "en": "fold the clothes",
+        "tr": "çamaşırları katlamak"
+      },
+      {
+        "id": "u8-24",
+        "en": "follow",
+        "tr": "uymak, takip etmek"
+      },
+      {
+        "id": "u8-25",
+        "en": "garden",
+        "tr": "bahçe"
+      },
+      {
+        "id": "u8-26",
+        "en": "grocery shopping",
+        "tr": "market alışverişi"
+      },
+      {
+        "id": "u8-27",
+        "en": "hang up the clothes",
+        "tr": "çamaşırları asmak"
+      },
+      {
+        "id": "u8-28",
+        "en": "happiness",
+        "tr": "mutluluk"
+      },
+      {
+        "id": "u8-29",
+        "en": "happy",
+        "tr": "mutlu"
+      },
+      {
+        "id": "u8-30",
+        "en": "help the parents",
+        "tr": "ebeveynlere yardım etmek"
+      },
+      {
+        "id": "u8-31",
+        "en": "household chores",
+        "tr": "ev işleri"
+      },
+      {
+        "id": "u8-32",
+        "en": "hurry up",
+        "tr": "acele etmek"
+      },
+      {
+        "id": "u8-33",
+        "en": "in charge of",
+        "tr": "sorumlu olmak"
+      },
+      {
+        "id": "u8-34",
+        "en": "in turns",
+        "tr": "sırayla"
+      },
+      {
+        "id": "u8-35",
+        "en": "keep promise",
+        "tr": "sözünü tutmak"
+      },
+      {
+        "id": "u8-36",
+        "en": "keep quiet",
+        "tr": "sessiz ol"
+      },
+      {
+        "id": "u8-37",
+        "en": "kitchen",
+        "tr": "mutfak"
+      },
+      {
+        "id": "u8-38",
+        "en": "library rules",
+        "tr": "kütüphane kuralları"
+      },
+      {
+        "id": "u8-39",
+        "en": "load the dishwasher",
+        "tr": "bulaşık makinesini doldurmak"
+      },
+      {
+        "id": "u8-40",
+        "en": "look after",
+        "tr": "ilgilenmek, bakmak"
+      },
+      {
+        "id": "u8-41",
+        "en": "make the bed",
+        "tr": "yatağı toplamak"
+      },
+      {
+        "id": "u8-42",
+        "en": "member",
+        "tr": "üye"
+      },
+      {
+        "id": "u8-43",
+        "en": "mop the floor",
+        "tr": "yeri paspaslamak"
+      },
+      {
+        "id": "u8-44",
+        "en": "necessary",
+        "tr": "gerekli"
+      },
+      {
+        "id": "u8-45",
+        "en": "obey the rules",
+        "tr": "kurallara uymak"
+      },
+      {
+        "id": "u8-46",
+        "en": "outdoor",
+        "tr": "dışarı, dış mekan"
+      },
+      {
+        "id": "u8-47",
+        "en": "pay the bills",
+        "tr": "faturaları ödemek"
+      },
+      {
+        "id": "u8-48",
+        "en": "pick up",
+        "tr": "birini (bir yerden) almak"
+      },
+      {
+        "id": "u8-49",
+        "en": "prepare",
+        "tr": "hazırlamak"
+      },
+      {
+        "id": "u8-50",
+        "en": "relaxed",
+        "tr": "rahat"
+      },
+      {
+        "id": "u8-51",
+        "en": "respect",
+        "tr": "saygı"
+      },
+      {
+        "id": "u8-52",
+        "en": "responsibility",
+        "tr": "sorumluluk"
+      },
+      {
+        "id": "u8-53",
+        "en": "responsible for",
+        "tr": "sorumlu olmak"
+      },
+      {
+        "id": "u8-54",
+        "en": "return the books",
+        "tr": "kitapları iade etmek, geri vermek"
+      },
+      {
+        "id": "u8-55",
+        "en": "set the table",
+        "tr": "masayı kurmak, sofrayı kurmak"
+      },
+      {
+        "id": "u8-56",
+        "en": "share",
+        "tr": "paylaşmak"
+      },
+      {
+        "id": "u8-57",
+        "en": "sweep the leaves",
+        "tr": "yaprakları süpürmek"
+      },
+      {
+        "id": "u8-58",
+        "en": "take out the garbage",
+        "tr": "çöpleri atmak"
+      },
+      {
+        "id": "u8-59",
+        "en": "take the dog for a walk",
+        "tr": "köpeği yürüyüşe çıkarmak"
+      },
+      {
+        "id": "u8-60",
+        "en": "take turns",
+        "tr": "sırayla"
+      },
+      {
+        "id": "u8-61",
+        "en": "task",
+        "tr": "görev"
+      },
+      {
+        "id": "u8-62",
+        "en": "tidy",
+        "tr": "düzenli, derli toplu"
+      },
+      {
+        "id": "u8-63",
+        "en": "tidy up the room",
+        "tr": "odayı toplamak, toparlamak"
+      },
+      {
+        "id": "u8-64",
+        "en": "to be honest",
+        "tr": "dürüst olmak gerekirse"
+      },
+      {
+        "id": "u8-65",
+        "en": "to do list",
+        "tr": "yapılacak listesi"
+      },
+      {
+        "id": "u8-66",
+        "en": "together",
+        "tr": "birlikte"
+      },
+      {
+        "id": "u8-67",
+        "en": "trash",
+        "tr": "çöp"
+      },
+      {
+        "id": "u8-68",
+        "en": "upset",
+        "tr": "üzgün"
+      },
+      {
+        "id": "u8-69",
+        "en": "vacuum the carpet",
+        "tr": "halıyı elektrik süpürgesi ile süpürmek"
+      },
+      {
+        "id": "u8-70",
+        "en": "wash the dishes",
+        "tr": "bulaşıkları yıkamak"
+      },
+      {
+        "id": "u8-71",
+        "en": "water the flowers",
+        "tr": "çiçekleri sulamak"
+      },
+      {
+        "id": "u8-72",
+        "en": "worried",
+        "tr": "endişeli"
+      },
+      {
+        "id": "u8-73",
+        "en": "you're right",
+        "tr": "haklısın"
+      }
+    ]
+  },
+  {
+    "unit": 9,
+    "title": "Science",
+    "words": [
+      {
+        "id": "u9-1",
+        "en": "accident",
+        "tr": "kaza"
+      },
+      {
+        "id": "u9-2",
+        "en": "achievement",
+        "tr": "başarı"
+      },
+      {
+        "id": "u9-3",
+        "en": "advantage",
+        "tr": "fayda, avantaj"
+      },
+      {
+        "id": "u9-4",
+        "en": "affect",
+        "tr": "etkilemek"
+      },
+      {
+        "id": "u9-5",
+        "en": "air conditioner",
+        "tr": "klima"
+      },
+      {
+        "id": "u9-6",
+        "en": "award",
+        "tr": "ödül"
+      },
+      {
+        "id": "u9-7",
+        "en": "barcode",
+        "tr": "barkod"
+      },
+      {
+        "id": "u9-8",
+        "en": "born",
+        "tr": "doğmak"
+      },
+      {
+        "id": "u9-9",
+        "en": "carriage",
+        "tr": "binek arabası"
+      },
+      {
+        "id": "u9-10",
+        "en": "cause",
+        "tr": "sebep olmak"
+      },
+      {
+        "id": "u9-11",
+        "en": "cell",
+        "tr": "hücre"
+      },
+      {
+        "id": "u9-12",
+        "en": "chemistry",
+        "tr": "kimya"
+      },
+      {
+        "id": "u9-13",
+        "en": "childhood",
+        "tr": "çocukluk çağı"
+      },
+      {
+        "id": "u9-14",
+        "en": "common",
+        "tr": "yaygın"
+      },
+      {
+        "id": "u9-15",
+        "en": "communicate",
+        "tr": "iletişim kurmak"
+      },
+      {
+        "id": "u9-16",
+        "en": "communication",
+        "tr": "iletişim"
+      },
+      {
+        "id": "u9-17",
+        "en": "compass",
+        "tr": "pusula"
+      },
+      {
+        "id": "u9-18",
+        "en": "conduct",
+        "tr": "yapmak, gerçekleştirmek"
+      },
+      {
+        "id": "u9-19",
+        "en": "create",
+        "tr": "oluşturmak, meydana getirmek"
+      },
+      {
+        "id": "u9-20",
+        "en": "cure",
+        "tr": "tedavi, çare"
+      },
+      {
+        "id": "u9-21",
+        "en": "damage",
+        "tr": "zarar, hasar"
+      },
+      {
+        "id": "u9-22",
+        "en": "develop",
+        "tr": "geliştirmek, gelişmek"
+      },
+      {
+        "id": "u9-23",
+        "en": "development",
+        "tr": "gelişim"
+      },
+      {
+        "id": "u9-24",
+        "en": "device",
+        "tr": "cihaz, aygıt, alet"
+      },
+      {
+        "id": "u9-25",
+        "en": "diabetes",
+        "tr": "şeker hastalığı"
+      },
+      {
+        "id": "u9-26",
+        "en": "disadvantage",
+        "tr": "zarar, dezavantaj"
+      },
+      {
+        "id": "u9-27",
+        "en": "discover",
+        "tr": "keşfetmek"
+      },
+      {
+        "id": "u9-28",
+        "en": "discoverer",
+        "tr": "kâşif"
+      },
+      {
+        "id": "u9-29",
+        "en": "discovery",
+        "tr": "keşif"
+      },
+      {
+        "id": "u9-30",
+        "en": "disease",
+        "tr": "hastalık"
+      },
+      {
+        "id": "u9-31",
+        "en": "efficient",
+        "tr": "etkili, verimli"
+      },
+      {
+        "id": "u9-32",
+        "en": "elevator",
+        "tr": "asansör"
+      },
+      {
+        "id": "u9-33",
+        "en": "entertainment",
+        "tr": "eğlence"
+      },
+      {
+        "id": "u9-34",
+        "en": "examine",
+        "tr": "muayene etmek"
+      },
+      {
+        "id": "u9-35",
+        "en": "experiment",
+        "tr": "deney"
+      },
+      {
+        "id": "u9-36",
+        "en": "explore",
+        "tr": "keşfetmek, araştırmak"
+      },
+      {
+        "id": "u9-37",
+        "en": "factory",
+        "tr": "fabrika"
+      },
+      {
+        "id": "u9-38",
+        "en": "finding direction",
+        "tr": "yön bulma"
+      },
+      {
+        "id": "u9-39",
+        "en": "fossil",
+        "tr": "fosil"
+      },
+      {
+        "id": "u9-40",
+        "en": "genius",
+        "tr": "dâhi"
+      },
+      {
+        "id": "u9-41",
+        "en": "headphone",
+        "tr": "kulaklık"
+      },
+      {
+        "id": "u9-42",
+        "en": "high-tech",
+        "tr": "ileri teknoloji"
+      },
+      {
+        "id": "u9-43",
+        "en": "human",
+        "tr": "insan"
+      },
+      {
+        "id": "u9-44",
+        "en": "illness",
+        "tr": "hastalık"
+      },
+      {
+        "id": "u9-45",
+        "en": "increase",
+        "tr": "artmak"
+      },
+      {
+        "id": "u9-46",
+        "en": "industry",
+        "tr": "endüstri"
+      },
+      {
+        "id": "u9-47",
+        "en": "information",
+        "tr": "bilgi"
+      },
+      {
+        "id": "u9-48",
+        "en": "interested in",
+        "tr": "ilgili olmak"
+      },
+      {
+        "id": "u9-49",
+        "en": "invent",
+        "tr": "icat etmek"
+      },
+      {
+        "id": "u9-50",
+        "en": "invention",
+        "tr": "icat"
+      },
+      {
+        "id": "u9-51",
+        "en": "inventor",
+        "tr": "mucit"
+      },
+      {
+        "id": "u9-52",
+        "en": "lab",
+        "tr": "laboratuvar"
+      },
+      {
+        "id": "u9-53",
+        "en": "light bulb",
+        "tr": "ampul"
+      },
+      {
+        "id": "u9-54",
+        "en": "medicine",
+        "tr": "tıp / ilaç"
+      },
+      {
+        "id": "u9-55",
+        "en": "microbe",
+        "tr": "mikrop"
+      },
+      {
+        "id": "u9-56",
+        "en": "microscope",
+        "tr": "mikroskop"
+      },
+      {
+        "id": "u9-57",
+        "en": "military",
+        "tr": "askeri"
+      },
+      {
+        "id": "u9-58",
+        "en": "Nobel Prize",
+        "tr": "Nobel Ödülü"
+      },
+      {
+        "id": "u9-59",
+        "en": "participate",
+        "tr": "katılmak"
+      },
+      {
+        "id": "u9-60",
+        "en": "patient",
+        "tr": "hasta"
+      },
+      {
+        "id": "u9-61",
+        "en": "physics",
+        "tr": "fizik"
+      },
+      {
+        "id": "u9-62",
+        "en": "pill",
+        "tr": "ilaç, hap"
+      },
+      {
+        "id": "u9-63",
+        "en": "prepare",
+        "tr": "hazırlamak"
+      },
+      {
+        "id": "u9-64",
+        "en": "printer",
+        "tr": "yazıcı"
+      },
+      {
+        "id": "u9-65",
+        "en": "printing press",
+        "tr": "matbaa, baskı makinesi"
+      },
+      {
+        "id": "u9-66",
+        "en": "produce",
+        "tr": "üretmek"
+      },
+      {
+        "id": "u9-67",
+        "en": "protect",
+        "tr": "korumak"
+      },
+      {
+        "id": "u9-68",
+        "en": "provide",
+        "tr": "sağlamak, temin etmek"
+      },
+      {
+        "id": "u9-69",
+        "en": "purpose",
+        "tr": "amaç, gaye"
+      },
+      {
+        "id": "u9-70",
+        "en": "quill pen",
+        "tr": "tüy kalem"
+      },
+      {
+        "id": "u9-71",
+        "en": "receive",
+        "tr": "kabul etmek, almak"
+      },
+      {
+        "id": "u9-72",
+        "en": "remote control",
+        "tr": "uzaktan kumanda"
+      },
+      {
+        "id": "u9-73",
+        "en": "research",
+        "tr": "araştırma"
+      },
+      {
+        "id": "u9-74",
+        "en": "science",
+        "tr": "bilim, fen"
+      },
+      {
+        "id": "u9-75",
+        "en": "scientist",
+        "tr": "bilim insanı"
+      },
+      {
+        "id": "u9-76",
+        "en": "search",
+        "tr": "araştırmak, araştırma"
+      },
+      {
+        "id": "u9-77",
+        "en": "soil",
+        "tr": "toprak"
+      },
+      {
+        "id": "u9-78",
+        "en": "study",
+        "tr": "çalışma, öğrenim"
+      },
+      {
+        "id": "u9-79",
+        "en": "successful",
+        "tr": "başarılı"
+      },
+      {
+        "id": "u9-80",
+        "en": "telescope",
+        "tr": "teleskop"
+      },
+      {
+        "id": "u9-81",
+        "en": "terrible",
+        "tr": "korkunç"
+      },
+      {
+        "id": "u9-82",
+        "en": "test tube",
+        "tr": "deney tüpü"
+      },
+      {
+        "id": "u9-83",
+        "en": "theory of relativity",
+        "tr": "görelilik teorisi"
+      },
+      {
+        "id": "u9-84",
+        "en": "transportation",
+        "tr": "ulaşım"
+      },
+      {
+        "id": "u9-85",
+        "en": "treat",
+        "tr": "tedavi etmek"
+      },
+      {
+        "id": "u9-86",
+        "en": "treatment",
+        "tr": "tedavi"
+      },
+      {
+        "id": "u9-87",
+        "en": "vaccination",
+        "tr": "aşı"
+      },
+      {
+        "id": "u9-88",
+        "en": "via",
+        "tr": "aracılığıyla"
+      },
+      {
+        "id": "u9-89",
+        "en": "warn",
+        "tr": "uyarmak"
+      },
+      {
+        "id": "u9-90",
+        "en": "washing machine",
+        "tr": "çamaşır makinesi"
+      },
+      {
+        "id": "u9-91",
+        "en": "water screw",
+        "tr": "su vidası"
+      },
+      {
+        "id": "u9-92",
+        "en": "wearable heart chip",
+        "tr": "giyilebilir kalp çipi"
+      },
+      {
+        "id": "u9-93",
+        "en": "weather changes",
+        "tr": "hava değişiklikleri"
+      },
+      {
+        "id": "u9-94",
+        "en": "wheel",
+        "tr": "tekerlek"
+      },
+      {
+        "id": "u9-95",
+        "en": "win",
+        "tr": "kazanmak"
+      },
+      {
+        "id": "u9-96",
+        "en": "X-ray",
+        "tr": "röntgen"
+      }
+    ]
+  },
+  {
+    "unit": 10,
+    "title": "Natural Forces",
+    "words": [
+      {
+        "id": "u10-1",
+        "en": "affect",
+        "tr": "etkilemek"
+      },
+      {
+        "id": "u10-2",
+        "en": "air",
+        "tr": "hava"
+      },
+      {
+        "id": "u10-3",
+        "en": "avalanche",
+        "tr": "çığ"
+      },
+      {
+        "id": "u10-4",
+        "en": "cause",
+        "tr": "sebep olmak"
+      },
+      {
+        "id": "u10-5",
+        "en": "climate change",
+        "tr": "iklim değişikliği"
+      },
+      {
+        "id": "u10-6",
+        "en": "crisis",
+        "tr": "kriz"
+      },
+      {
+        "id": "u10-7",
+        "en": "cut down",
+        "tr": "kesmek"
+      },
+      {
+        "id": "u10-8",
+        "en": "dead",
+        "tr": "ölü"
+      },
+      {
+        "id": "u10-9",
+        "en": "deforestation",
+        "tr": "ormansızlaşma"
+      },
+      {
+        "id": "u10-10",
+        "en": "destruction",
+        "tr": "yıkım"
+      },
+      {
+        "id": "u10-11",
+        "en": "disaster",
+        "tr": "felaket, afet"
+      },
+      {
+        "id": "u10-12",
+        "en": "drought",
+        "tr": "kuraklık"
+      },
+      {
+        "id": "u10-13",
+        "en": "earth",
+        "tr": "yeryüzü"
+      },
+      {
+        "id": "u10-14",
+        "en": "earthquake",
+        "tr": "deprem"
+      },
+      {
+        "id": "u10-15",
+        "en": "eco friendly",
+        "tr": "doğa dostu"
+      },
+      {
+        "id": "u10-16",
+        "en": "effect",
+        "tr": "etki, etkilemek"
+      },
+      {
+        "id": "u10-17",
+        "en": "enough",
+        "tr": "yeterli"
+      },
+      {
+        "id": "u10-18",
+        "en": "environment",
+        "tr": "çevre"
+      },
+      {
+        "id": "u10-19",
+        "en": "environmental",
+        "tr": "çevresel"
+      },
+      {
+        "id": "u10-20",
+        "en": "erosion",
+        "tr": "erozyon, toprak aşınması"
+      },
+      {
+        "id": "u10-21",
+        "en": "estimated",
+        "tr": "tahmin edilen"
+      },
+      {
+        "id": "u10-22",
+        "en": "feel",
+        "tr": "hissetmek"
+      },
+      {
+        "id": "u10-23",
+        "en": "flood",
+        "tr": "sel baskını"
+      },
+      {
+        "id": "u10-24",
+        "en": "forest",
+        "tr": "orman"
+      },
+      {
+        "id": "u10-25",
+        "en": "forest fire",
+        "tr": "orman yangını"
+      },
+      {
+        "id": "u10-26",
+        "en": "future",
+        "tr": "gelecek"
+      },
+      {
+        "id": "u10-27",
+        "en": "global warming",
+        "tr": "küresel ısınma"
+      },
+      {
+        "id": "u10-28",
+        "en": "happen",
+        "tr": "olmak, meydana gelmek"
+      },
+      {
+        "id": "u10-29",
+        "en": "hit",
+        "tr": "vurmak"
+      },
+      {
+        "id": "u10-30",
+        "en": "human",
+        "tr": "insan"
+      },
+      {
+        "id": "u10-31",
+        "en": "hunger",
+        "tr": "açlık"
+      },
+      {
+        "id": "u10-32",
+        "en": "hurricane",
+        "tr": "kasırga"
+      },
+      {
+        "id": "u10-33",
+        "en": "increase",
+        "tr": "artmak"
+      },
+      {
+        "id": "u10-34",
+        "en": "injured",
+        "tr": "yaralı"
+      },
+      {
+        "id": "u10-35",
+        "en": "injury",
+        "tr": "yaralanma"
+      },
+      {
+        "id": "u10-36",
+        "en": "keep clean",
+        "tr": "temiz tutmak"
+      },
+      {
+        "id": "u10-37",
+        "en": "killed",
+        "tr": "öldürmek"
+      },
+      {
+        "id": "u10-38",
+        "en": "land",
+        "tr": "kara, toprak parçası"
+      },
+      {
+        "id": "u10-39",
+        "en": "landslide",
+        "tr": "toprak kayması, heyelan"
+      },
+      {
+        "id": "u10-40",
+        "en": "leak",
+        "tr": "sızıntı"
+      },
+      {
+        "id": "u10-41",
+        "en": "learn",
+        "tr": "öğrenmek"
+      },
+      {
+        "id": "u10-42",
+        "en": "leave",
+        "tr": "terk etmek"
+      },
+      {
+        "id": "u10-43",
+        "en": "magnitude",
+        "tr": "büyüklük"
+      },
+      {
+        "id": "u10-44",
+        "en": "main",
+        "tr": "ana, başlıca"
+      },
+      {
+        "id": "u10-45",
+        "en": "melting ice",
+        "tr": "buzun erimesi"
+      },
+      {
+        "id": "u10-46",
+        "en": "missing",
+        "tr": "kayıp"
+      },
+      {
+        "id": "u10-47",
+        "en": "movement",
+        "tr": "hareket"
+      },
+      {
+        "id": "u10-48",
+        "en": "natural",
+        "tr": "doğal"
+      },
+      {
+        "id": "u10-49",
+        "en": "neighbour",
+        "tr": "komşu"
+      },
+      {
+        "id": "u10-50",
+        "en": "overpopulation",
+        "tr": "aşırı nüfus"
+      },
+      {
+        "id": "u10-51",
+        "en": "pesticide",
+        "tr": "böcek ilacı"
+      },
+      {
+        "id": "u10-52",
+        "en": "planet",
+        "tr": "gezegen"
+      },
+      {
+        "id": "u10-53",
+        "en": "plant trees",
+        "tr": "ağaçlar dikmek"
+      },
+      {
+        "id": "u10-54",
+        "en": "pollute",
+        "tr": "kirletmek"
+      },
+      {
+        "id": "u10-55",
+        "en": "pollution",
+        "tr": "kirlilik"
+      },
+      {
+        "id": "u10-56",
+        "en": "population",
+        "tr": "nüfus"
+      },
+      {
+        "id": "u10-57",
+        "en": "precaution",
+        "tr": "önlem"
+      },
+      {
+        "id": "u10-58",
+        "en": "prevent",
+        "tr": "önlemek"
+      },
+      {
+        "id": "u10-59",
+        "en": "private car",
+        "tr": "özel araç"
+      },
+      {
+        "id": "u10-60",
+        "en": "protect",
+        "tr": "korumak"
+      },
+      {
+        "id": "u10-61",
+        "en": "public transportation",
+        "tr": "toplu taşıma"
+      },
+      {
+        "id": "u10-62",
+        "en": "radiation",
+        "tr": "radyasyon"
+      },
+      {
+        "id": "u10-63",
+        "en": "reach",
+        "tr": "ulaşmak"
+      },
+      {
+        "id": "u10-64",
+        "en": "reason",
+        "tr": "sebep"
+      },
+      {
+        "id": "u10-65",
+        "en": "recycle",
+        "tr": "geri dönüşüm"
+      },
+      {
+        "id": "u10-66",
+        "en": "region",
+        "tr": "bölge, alan"
+      },
+      {
+        "id": "u10-67",
+        "en": "rescue team",
+        "tr": "kurtarma ekibi"
+      },
+      {
+        "id": "u10-68",
+        "en": "result",
+        "tr": "sonuç"
+      },
+      {
+        "id": "u10-69",
+        "en": "save",
+        "tr": "korumak"
+      },
+      {
+        "id": "u10-70",
+        "en": "serious",
+        "tr": "ciddi"
+      },
+      {
+        "id": "u10-71",
+        "en": "shortage",
+        "tr": "kıtlık, eksiklik"
+      },
+      {
+        "id": "u10-72",
+        "en": "source",
+        "tr": "kaynak"
+      },
+      {
+        "id": "u10-73",
+        "en": "suffer from",
+        "tr": "acı çekmek, muzdarip olmak"
+      },
+      {
+        "id": "u10-74",
+        "en": "survivor",
+        "tr": "hayatta kalan"
+      },
+      {
+        "id": "u10-75",
+        "en": "take action",
+        "tr": "harekete geçmek"
+      },
+      {
+        "id": "u10-76",
+        "en": "temperature",
+        "tr": "sıcaklık"
+      },
+      {
+        "id": "u10-77",
+        "en": "terrible",
+        "tr": "korkunç"
+      },
+      {
+        "id": "u10-78",
+        "en": "the power plant",
+        "tr": "enerji santrali"
+      },
+      {
+        "id": "u10-79",
+        "en": "thirst",
+        "tr": "susuzluk"
+      },
+      {
+        "id": "u10-80",
+        "en": "threat",
+        "tr": "tehdit"
+      },
+      {
+        "id": "u10-81",
+        "en": "tornado",
+        "tr": "hortum"
+      },
+      {
+        "id": "u10-82",
+        "en": "tsunami",
+        "tr": "tsunami"
+      },
+      {
+        "id": "u10-83",
+        "en": "use",
+        "tr": "kullanmak"
+      },
+      {
+        "id": "u10-84",
+        "en": "volcanic eruption",
+        "tr": "yanardağ patlaması"
+      },
+      {
+        "id": "u10-85",
+        "en": "waste",
+        "tr": "israf etmek / atık"
+      },
+      {
+        "id": "u10-86",
+        "en": "water",
+        "tr": "su"
+      },
+      {
+        "id": "u10-87",
+        "en": "wave",
+        "tr": "dalga"
+      },
+      {
+        "id": "u10-88",
+        "en": "weather condition",
+        "tr": "hava durumu"
+      },
+      {
+        "id": "u10-89",
+        "en": "wildlife",
+        "tr": "vahşi yaşam"
+      },
+      {
+        "id": "u10-90",
+        "en": "wind",
+        "tr": "rüzgar"
+      },
+      {
+        "id": "u10-91",
+        "en": "world",
+        "tr": "dünya"
+      },
+      {
+        "id": "u10-92",
+        "en": "worried",
+        "tr": "endişeli"
+      }
+    ]
+  }
+];
