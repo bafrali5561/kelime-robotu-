@@ -33,3 +33,6 @@ loadKelimeScript('./vocabulary-overview.js?v=20260907-1', 'kelime-vocab-overview
 
 // Guided home experience: clear start point, simplified study choices and better page order.
 loadKelimeScript('./home-flow.js?v=20260907-1', 'kelime-home-flow');
+
+// The complete vocabulary roadmap belongs at the very end of the dashboard.
+loadKelimeScript('./layout-finalizer.js?v=20260907-1', 'kelime-layout-finalizer');
