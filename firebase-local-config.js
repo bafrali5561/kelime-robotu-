@@ -214,3 +214,12 @@ window.FIREBASE_CONFIG = {
     initEnhancements();
   }
 })();
+
+// Load the richer, click-through detail interface. Keeping it in a separate file
+// avoids coupling dashboard exploration features to the core learning engine.
+if (!document.querySelector('script[data-kelime-details]')) {
+  const detailScript = document.createElement('script');
+  detailScript.src = './details.js?v=20260907-1';
+  detailScript.dataset.kelimeDetails = '1';
+  document.head.appendChild(detailScript);
+}
