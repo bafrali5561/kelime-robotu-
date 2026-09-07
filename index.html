@@ -76,14 +76,26 @@
 
     <main>
       <section class="hero card">
-        <div>
+        <div class="hero-copy">
           <span class="eyebrow" id="weekBadge">1. Gün</span>
           <h2 id="heroTitle">Bu haftanın kelimelerini robotla öğren</h2>
           <p id="heroText">Kelimeyi gör, cevapla, yanlışlarını tekrar et ve öğrendiklerini kalıcı hâle getir.</p>
+          <div class="hero-tip" id="heroTip">Bugün önce Bugünün Çalışması ile başla, sonra Yanlışlarım bölümüne geç.</div>
         </div>
-        <div class="hero-score">
-          <div class="ring" id="overallRing"><span id="overallPct">0%</span></div>
-          <small>Genel ilerleme</small>
+        <div class="hero-side">
+          <div class="hero-score">
+            <div class="ring" id="overallRing"><span id="overallPct">0%</span></div>
+            <small>Genel ilerleme</small>
+          </div>
+          <div class="level-card">
+            <div class="level-top">
+              <span class="level-chip" id="levelChip">Seviye 1</span>
+              <span class="level-rank" id="rankName">Kelime Kaşifi</span>
+            </div>
+            <b id="xpText">0 / 120 XP</b>
+            <div class="mini-track xp-track"><div class="mini-fill" id="xpFill" style="width:0%"></div></div>
+            <small id="xpHint">Yeni sorular çözerek XP kazan.</small>
+          </div>
         </div>
       </section>
 
@@ -93,6 +105,23 @@
         <article class="stat card"><span class="stat-icon">🎯</span><div><b id="accuracyValue">0%</b><small>Doğruluk</small></div></article>
         <article class="stat card"><span class="stat-icon">⏱️</span><div><b id="todayMinutes">0 dk</b><small>Bugün</small></div></article>
         <article class="stat card"><span class="stat-icon">🔥</span><div><b id="streakValue">0</b><small>Günlük seri</small></div></article>
+      </section>
+
+      <section class="mission-grid">
+        <article class="card mission-card">
+          <div class="section-head compact-head"><div><span class="eyebrow">GÖREV MERKEZİ</span><h3>Bugünün hedefleri</h3></div><span class="badge badge-gold" id="missionReward">+0 XP</span></div>
+          <div id="dailyMissions" class="mission-list"></div>
+        </article>
+
+        <article class="card focus-card">
+          <div class="section-head compact-head"><div><span class="eyebrow">ODAK ALANI</span><h3>En çok zorlanılan kelimeler</h3></div></div>
+          <div id="focusWords" class="focus-words"></div>
+        </article>
+
+        <article class="card badges-card">
+          <div class="section-head compact-head"><div><span class="eyebrow">ROZETLER</span><h3>Kazanılan başarılar</h3></div></div>
+          <div id="achievementBadges" class="badges-grid"></div>
+        </article>
       </section>
 
       <section class="card robot-panel" id="robotPanel">
@@ -116,12 +145,12 @@
 
         <div id="menuArea">
           <div class="mode-grid">
-            <button class="mode-btn primary" data-mode="daily"><span>📚</span><b>Bugünün Çalışması</b><small>Yeni + tekrar kelimeleri</small></button>
-            <button class="mode-btn" data-mode="learn"><span>🧠</span><b>Öğret</b><small>8 kelimelik yeni grup</small></button>
-            <button class="mode-btn" data-mode="wrong"><span>🔁</span><b>Yanlışlarım</b><small>Zayıf kelimeleri tekrar et</small></button>
-            <button class="mode-btn" data-mode="quick"><span>⚡</span><b>Hızlı Test</b><small>10 karışık soru</small></button>
-            <button class="mode-btn" data-mode="hard"><span>🏆</span><b>Zor Test</b><small>20 soruluk karma sınav</small></button>
-            <button class="mode-btn" data-mode="units"><span>🗂️</span><b>Ünite Seç</b><small>İstediğin üniteden çalış</small></button>
+            <button class="mode-btn primary" data-mode="daily"><span>📚</span><b>Bugünün Çalışması</b><small>Önerilen başlangıç • yeni + tekrar</small></button>
+            <button class="mode-btn learn-btn" data-mode="learn"><span>🧠</span><b>Öğret</b><small>8 kelimelik mini ders</small></button>
+            <button class="mode-btn wrong-btn" data-mode="wrong"><span>🔁</span><b>Yanlışlarım</b><small>Zayıf kelimeleri toparla</small></button>
+            <button class="mode-btn quick-btn" data-mode="quick"><span>⚡</span><b>Hızlı Test</b><small>10 soruluk hız turu</small></button>
+            <button class="mode-btn hard-btn" data-mode="hard"><span>🏆</span><b>Zor Test</b><small>20 soruluk meydan okuma</small></button>
+            <button class="mode-btn units-btn" data-mode="units"><span>🗂️</span><b>Ünite Seç</b><small>İstediğin üniteden çalış</small></button>
           </div>
         </div>
       </section>
@@ -139,6 +168,17 @@
           <div class="section-head"><div><span class="eyebrow">ÜNİTELER</span><h3>İlerleme</h3></div></div>
           <div id="unitProgress" class="unit-progress"></div>
         </article>
+      </section>
+
+      <section class="card explain-card">
+        <div class="section-head">
+          <div><span class="eyebrow">NASIL ÇALIŞILIR?</span><h3>3 adımda en verimli kullanım</h3></div>
+        </div>
+        <div class="explain-grid">
+          <div class="explain-step"><span>1</span><b>Bugünün Çalışması</b><small>Robot sana bugün çalışman gereken kelimeleri seçer.</small></div>
+          <div class="explain-step"><span>2</span><b>Yanlışlarım</b><small>Yanlış yaptığın kelimeler tekrar önüne gelir.</small></div>
+          <div class="explain-step"><span>3</span><b>Hızlı / Zor Test</b><small>Günün sonunda kendini test ederek rozet kazan.</small></div>
+        </div>
       </section>
 
       <section class="card tools-card">

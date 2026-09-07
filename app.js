@@ -212,6 +212,97 @@ function accuracy() {
   return state.stats.attempts ? Math.round((state.stats.correct / state.stats.attempts) * 100) : 0;
 }
 
+
+function totalXp() {
+  return (state.stats.correct * 8) + (learnedCount() * 20) + ((state.streak.count || 0) * 15) + Math.round((Object.values(state.activity || {}).reduce((sum, item) => sum + (item.sessions || 0), 0)) * 5);
+}
+
+function levelInfo() {
+  const xp = totalXp();
+  const perLevel = 120;
+  const level = Math.max(1, Math.floor(xp / perLevel) + 1);
+  const currentStart = (level - 1) * perLevel;
+  const currentXp = xp - currentStart;
+  const nextXp = perLevel;
+  const pct = Math.max(0, Math.min(100, Math.round((currentXp / nextXp) * 100)));
+  const ranks = ['Kelime Kaşifi', 'Kelime Oyuncusu', 'Kelime Ustası', 'Cümle Avcısı', 'Dil Şampiyonu', 'Süper Hafıza'];
+  const rank = ranks[Math.min(ranks.length - 1, Math.floor((level - 1) / 2))];
+  return { xp, level, currentXp, nextXp, pct, rank };
+}
+
+function todaySummary() {
+  const a = activityFor();
+  return {
+    attempts: a.attempts || 0,
+    correct: a.correct || 0,
+    minutes: Math.round((a.seconds || 0) / 60),
+    sessions: a.sessions || 0,
+  };
+}
+
+function missionDefinitions() {
+  const t = todaySummary();
+  return [
+    {
+      icon: '🎯',
+      title: 'Soru Avı',
+      desc: 'Bugün 12 soru çöz.',
+      current: t.attempts,
+      target: 12,
+      reward: 40,
+    },
+    {
+      icon: '✅',
+      title: 'Doğru Serisi',
+      desc: 'Bugün 8 doğru yap.',
+      current: t.correct,
+      target: 8,
+      reward: 35,
+    },
+    {
+      icon: '⏰',
+      title: 'Çalışma Süresi',
+      desc: 'En az 10 dakika çalış.',
+      current: t.minutes,
+      target: 10,
+      reward: 25,
+    },
+  ].map((m) => ({ ...m, done: m.current >= m.target, pct: Math.min(100, Math.round((m.current / m.target) * 100)) }));
+}
+
+function achievementDefinitions() {
+  const learned = learnedCount();
+  const acc = accuracy();
+  const streak = state.streak.count || 0;
+  return [
+    { icon: '🌱', title: 'İlk Adım', desc: 'İlk 10 soruyu çöz.', unlocked: state.stats.attempts >= 10 },
+    { icon: '🔥', title: 'Seri Başladı', desc: '3 gün üst üste çalış.', unlocked: streak >= 3 },
+    { icon: '🧠', title: 'Kelime Avcısı', desc: '25 kelime öğren.', unlocked: learned >= 25 },
+    { icon: '🎖️', title: 'Doğruluk Ustası', desc: '%80 doğruluğa ulaş.', unlocked: state.stats.attempts >= 10 && acc >= 80 },
+  ];
+}
+
+function weakestWords(limit = 4) {
+  return ALL
+    .map((w) => {
+      const p = pFor(w.id);
+      const difficulty = (p.wrong * 2) + (p.lastWrong ? 2 : 0) - p.correct - p.level;
+      return { ...w, p, difficulty };
+    })
+    .filter((w) => w.p.attempts > 0)
+    .sort((a, b) => b.difficulty - a.difficulty)
+    .slice(0, limit);
+}
+
+function nextActionTip() {
+  const today = todaySummary();
+  const review = reviewCount();
+  if (today.attempts === 0) return 'Bugün önce “Bugünün Çalışması” ile başla. Hedef: 12 soru.';
+  if (review >= 6) return 'Tekrar kuyruğun büyümüş. Şimdi “Yanlışlarım” bölümüne geçmen iyi olur.';
+  if (today.correct >= 8) return 'Harika gidiyorsun! Bir Hızlı Test ile günün puanını yükseltebilirsin.';
+  return 'Mini ders ve hızlı test arasında geçiş yaparak ilerlemeyi hızlandırabilirsin.';
+}
+
 function renderTodayMinutes() {
   const seconds = activityFor().seconds || 0;
   $('#todayMinutes').textContent = seconds < 60 && seconds > 0 ? '<1 dk' : `${Math.round(seconds / 60)} dk`;
@@ -221,6 +312,11 @@ function renderDashboard() {
   const learned = learnedCount();
   const pct = ALL.length ? Math.round((learned / ALL.length) * 100) : 0;
   const day = currentDay();
+  const xp = levelInfo();
+  const missions = missionDefinitions();
+  const achievements = achievementDefinitions();
+  const focus = weakestWords();
+
   $('#overallPct').textContent = `${pct}%`;
   $('#overallRing').style.background = `conic-gradient(var(--primary) ${pct * 3.6}deg,#dbe5de 0deg)`;
   $('#learnedCount').textContent = learned;
@@ -232,7 +328,43 @@ function renderDashboard() {
 
   const plan = WEEK[day - 1];
   $('#heroTitle').textContent = `Bugün: ${plan.label}`;
-  $('#heroText').textContent = `Toplam ${ALL.length} kelime/kalıp var. Robot yeni kelimeleri küçük gruplarla öğretir, yanlışları tekrar kuyruğuna alır.`;
+  $('#heroText').textContent = `Toplam ${ALL.length} kelime/kalıp var. Robot yeni kelimeleri küçük gruplarla öğretir, yanlışlarını tekrar ettirir ve ilerlemeni puanlandırır.`;
+  $('#heroTip').textContent = nextActionTip();
+  $('#levelChip').textContent = `Seviye ${xp.level}`;
+  $('#rankName').textContent = xp.rank;
+  $('#xpText').textContent = `${xp.currentXp} / ${xp.nextXp} XP`;
+  $('#xpFill').style.width = `${xp.pct}%`;
+  $('#xpHint').textContent = `Toplam ${xp.xp} XP • Bir sonraki seviye için ${Math.max(0, xp.nextXp - xp.currentXp)} XP kaldı.`;
+
+  $('#missionReward').textContent = `+${missions.filter((m) => m.done).reduce((sum, m) => sum + m.reward, 0)} XP`;
+  $('#dailyMissions').innerHTML = missions.map((m) => `
+    <div class="mission-item ${m.done ? 'done' : ''}">
+      <div class="mission-icon">${m.icon}</div>
+      <div>
+        <div class="mission-title">${m.title}</div>
+        <div class="mission-desc">${m.desc}</div>
+      </div>
+      <div class="mission-meta">
+        <span class="mission-pct">${m.current}/${m.target}</span>
+        <div class="mini-track mission-mini"><div class="mini-fill" style="width:${m.pct}%"></div></div>
+      </div>
+    </div>`).join('');
+
+  $('#achievementBadges').innerHTML = achievements.map((a) => `
+    <div class="badge-card ${a.unlocked ? '' : 'locked'}">
+      <div class="badge-icon">${a.icon}</div>
+      <div><b>${a.title}${a.unlocked ? ' ✓' : ''}</b><small>${a.desc}</small></div>
+    </div>`).join('');
+
+  $('#focusWords').innerHTML = focus.length ? focus.map((w) => `
+    <div class="focus-item">
+      <div class="focus-main">
+        <b>${escapeHtml(w.en)}</b>
+        <small>${escapeHtml(w.tr)} • Ünite ${w.unit}</small>
+      </div>
+      <span class="${w.p.lastWrong ? 'chip-alert' : 'chip-neutral'}">${w.p.wrong} yanlış • seviye ${w.p.level}</span>
+    </div>`).join('') : '<div class="focus-item"><div class="focus-main"><b>Henüz zayıf kelime yok</b><small>İlk turu bitirince robot burada tekrar edilmesi gereken kelimeleri gösterecek.</small></div><span class="chip-ok">Hazır</span></div>';
+
   $('#weekPlan').innerHTML = WEEK.map((x) => `
     <div class="day-row ${x.day === day ? 'current' : ''}">
       <div class="day-num">Gün ${x.day}</div>
@@ -316,7 +448,8 @@ function endSession() {
   stopStudyTimer();
   const total = session.correct + session.wrong;
   const pct = total ? Math.round((session.correct / total) * 100) : 0;
-  $('#chat').innerHTML = `<div class="session-summary"><div class="score-big">${pct}%</div><h3>${session.title} tamamlandı</h3><p>${session.correct} doğru • ${session.wrong} yanlış</p>${pct >= 90 ? '<p>🏆 Çok iyi!' : '<p>🔁 Yanlış kelimeler tekrar listesine eklendi.'}</p></div>`;
+  const earnedXp = (session.correct * 8) + (pct >= 90 ? 20 : 0);
+  $('#chat').innerHTML = `<div class="session-summary"><div class="score-big">${pct}%</div><h3>${session.title} tamamlandı</h3><p>${session.correct} doğru • ${session.wrong} yanlış</p><p>✨ Bu tur katkısı: yaklaşık <b>+${earnedXp} XP</b></p>${pct >= 90 ? '<p>🏆 Çok iyi! Bonus kazandın.</p>' : '<p>🔁 Yanlış kelimeler tekrar listesine eklendi.</p>'}</div>`;
   $('#answerArea').innerHTML = '<button class="next-btn" id="backMenuBtn">Ana menüye dön</button>';
   $('#sessionLabel').textContent = 'Tamamlandı';
   $('#sessionProgress').style.width = '100%';
