@@ -11,8 +11,10 @@ window.FIREBASE_CONFIG = {
   measurementId: "G-JCRHEP2XJR"
 };
 
-// Small UI enhancements kept outside the main module so they can be deployed safely
-// without changing the learning/session engine.
+// UI/progress consistency layer.
+// The original learning engine marks a word as fully mastered only at level 3.
+// For dashboard feedback, we also credit meaningful partial learning so progress
+// does not appear stuck at 0 while the student is answering correctly.
 (() => {
   const STATE_KEYS = ['kelimeRobotu.v2', 'kelimeRobotu.v1'];
 
@@ -23,7 +25,7 @@ window.FIREBASE_CONFIG = {
         if (raw) return JSON.parse(raw);
       } catch (_) {}
     }
-    return { progress: {} };
+    return { progress: {}, stats: {}, streak: {}, activity: {} };
   }
 
   function wordLearningPercent(progress) {
@@ -31,30 +33,109 @@ window.FIREBASE_CONFIG = {
     const attempts = Number(p.attempts || 0);
     const correct = Number(p.correct || 0);
     const level = Number(p.level || 0);
+    const lastWrong = Boolean(p.lastWrong);
     if (!attempts) return 0;
-    if (level >= 3) return 100;
-    if (!correct) return 10;
-    const base = [35, 55, 80][Math.max(0, Math.min(2, level))];
-    const accuracy = correct / attempts;
-    return Math.min(95, Math.round(base + (accuracy * 10)));
+
+    const accuracy = Math.max(0, Math.min(1, correct / attempts));
+    if (level >= 3 && !lastWrong) return 100;
+
+    // A first correct answer is progress, two solid recalls should visibly count
+    // as mostly learned, while a recent wrong answer reduces confidence.
+    let score = 15;
+    score += Math.min(correct, 3) * 18;
+    score += Math.round(accuracy * 25);
+    score += Math.min(level, 2) * 7;
+    if (lastWrong) score -= 12;
+
+    return Math.max(8, Math.min(95, Math.round(score)));
+  }
+
+  function isLearned(progress) {
+    const p = progress || {};
+    const attempts = Number(p.attempts || 0);
+    if (!attempts || p.lastWrong) return false;
+    return wordLearningPercent(p) >= 70;
+  }
+
+  function learningSummary() {
+    const state = readState();
+    const data = window.VOCAB_DATA || [];
+    const words = data.flatMap((unit) => unit.words || []);
+    const progress = state.progress || {};
+
+    const learned = words.filter((w) => isLearned(progress[w.id])).length;
+    const studied = words.filter((w) => Number(progress[w.id]?.attempts || 0) > 0).length;
+    const review = words.filter((w) => {
+      const p = progress[w.id];
+      return Number(p?.attempts || 0) > 0 && (!isLearned(p) || Boolean(p?.lastWrong));
+    }).length;
+    const totalScore = words.reduce((sum, w) => sum + wordLearningPercent(progress[w.id]), 0);
+    const percent = words.length ? Math.round(totalScore / words.length) : 0;
+
+    return { state, data, words, progress, learned, studied, review, percent };
+  }
+
+  function refreshTopProgress() {
+    const summary = learningSummary();
+
+    const learnedEl = document.getElementById('learnedCount');
+    if (learnedEl) learnedEl.textContent = String(summary.learned);
+
+    const reviewEl = document.getElementById('reviewCount');
+    if (reviewEl) reviewEl.textContent = String(summary.review);
+
+    const pctEl = document.getElementById('overallPct');
+    if (pctEl) pctEl.textContent = `${summary.percent}%`;
+
+    const ring = document.getElementById('overallRing');
+    if (ring) ring.style.background = `conic-gradient(var(--primary) ${summary.percent * 3.6}deg,#dbe5de 0deg)`;
+
+    // Keep XP/level display consistent with the corrected learned count.
+    const stats = summary.state.stats || {};
+    const streak = summary.state.streak || {};
+    const sessions = Object.values(summary.state.activity || {}).reduce((sum, item) => sum + Number(item?.sessions || 0), 0);
+    const xp = (Number(stats.correct || 0) * 8) + (summary.learned * 20) + (Number(streak.count || 0) * 15) + (sessions * 5);
+    const perLevel = 120;
+    const level = Math.max(1, Math.floor(xp / perLevel) + 1);
+    const currentXp = xp - ((level - 1) * perLevel);
+    const levelPct = Math.max(0, Math.min(100, Math.round((currentXp / perLevel) * 100)));
+    const ranks = ['Kelime Kaşifi', 'Kelime Oyuncusu', 'Kelime Ustası', 'Cümle Avcısı', 'Dil Şampiyonu', 'Süper Hafıza'];
+    const rank = ranks[Math.min(ranks.length - 1, Math.floor((level - 1) / 2))];
+
+    const levelChip = document.getElementById('levelChip');
+    if (levelChip) levelChip.textContent = `Seviye ${level}`;
+    const rankName = document.getElementById('rankName');
+    if (rankName) rankName.textContent = rank;
+    const xpText = document.getElementById('xpText');
+    if (xpText) xpText.textContent = `${currentXp} / ${perLevel} XP`;
+    const xpFill = document.getElementById('xpFill');
+    if (xpFill) xpFill.style.width = `${levelPct}%`;
+    const xpHint = document.getElementById('xpHint');
+    if (xpHint) xpHint.textContent = `Toplam ${xp} XP • Bir sonraki seviye için ${Math.max(0, perLevel - currentXp)} XP kaldı.`;
+
+    // Correct the Kelime Avcısı badge, which previously used only level-3 mastery.
+    document.querySelectorAll('.badge-card').forEach((card) => {
+      const title = card.querySelector('b');
+      if (!title || !title.textContent.includes('Kelime Avcısı')) return;
+      const unlocked = summary.learned >= 25;
+      card.classList.toggle('locked', !unlocked);
+      title.textContent = `Kelime Avcısı${unlocked ? ' ✓' : ''}`;
+    });
   }
 
   function refreshUnitProgress() {
     const holder = document.getElementById('unitProgress');
-    const data = window.VOCAB_DATA || [];
-    if (!holder || !data.length) return;
+    const summary = learningSummary();
+    if (!holder || !summary.data.length) return;
 
-    const state = readState();
-    const progress = state.progress || {};
     const rows = [...holder.querySelectorAll('.unit-row')];
-
     rows.forEach((row, index) => {
-      const unit = data[index];
+      const unit = summary.data[index];
       if (!unit) return;
       const words = unit.words || [];
-      const learned = words.filter((w) => Number(progress[w.id]?.level || 0) >= 3).length;
-      const studied = words.filter((w) => Number(progress[w.id]?.attempts || 0) > 0).length;
-      const totalLearning = words.reduce((sum, w) => sum + wordLearningPercent(progress[w.id]), 0);
+      const learned = words.filter((w) => isLearned(summary.progress[w.id])).length;
+      const studied = words.filter((w) => Number(summary.progress[w.id]?.attempts || 0) > 0).length;
+      const totalLearning = words.reduce((sum, w) => sum + wordLearningPercent(summary.progress[w.id]), 0);
       const percent = words.length ? Math.round(totalLearning / words.length) : 0;
 
       const fill = row.querySelector('.mini-fill');
@@ -76,7 +157,7 @@ window.FIREBASE_CONFIG = {
       }
 
       const detail = row.querySelector('div:first-child small');
-      if (detail) detail.textContent = `${learned}/${words.length} tam öğrenildi • ${studied} kelime çalışıldı`;
+      if (detail) detail.textContent = `${learned}/${words.length} öğrenildi • ${studied} kelime çalışıldı`;
     });
   }
 
@@ -136,18 +217,21 @@ window.FIREBASE_CONFIG = {
     row.appendChild(actions);
   }
 
-  function initEnhancements() {
+  function refreshAll() {
     addExitButton();
+    refreshTopProgress();
     refreshUnitProgress();
+  }
 
-    const holder = document.getElementById('unitProgress');
-    if (holder) {
-      const observer = new MutationObserver(() => refreshUnitProgress());
-      observer.observe(holder, { childList: true });
-    }
+  function initEnhancements() {
+    refreshAll();
 
-    window.addEventListener('storage', refreshUnitProgress);
-    setInterval(refreshUnitProgress, 1500);
+    const observer = new MutationObserver(() => refreshAll());
+    const app = document.getElementById('appShell') || document.body;
+    observer.observe(app, { childList: true, subtree: true });
+
+    window.addEventListener('storage', refreshAll);
+    setInterval(refreshAll, 1200);
   }
 
   if (document.readyState === 'loading') {
