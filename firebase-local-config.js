@@ -232,3 +232,12 @@ if (!document.querySelector('script[data-kelime-learning-plus]')) {
   learningPlus.dataset.kelimeLearningPlus = '1';
   document.head.appendChild(learningPlus);
 }
+
+// Full vocabulary roadmap near the top of the dashboard. Students can see all
+// target words from day one and learned words receive a clear check mark.
+if (!document.querySelector('script[data-kelime-vocab-overview]')) {
+  const vocabOverview = document.createElement('script');
+  vocabOverview.src = './vocabulary-overview.js?v=20260907-1';
+  vocabOverview.dataset.kelimeVocabOverview = '1';
+  document.head.appendChild(vocabOverview);
+}
