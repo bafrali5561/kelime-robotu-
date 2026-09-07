@@ -1,4 +1,4 @@
-const CACHE = 'kelime-robotu-v4';
+const CACHE = 'kelime-robotu-v5';
 const ASSETS = [
   './',
   './index.html',
@@ -12,6 +12,7 @@ const ASSETS = [
   './learning-plus.js',
   './vocabulary-overview.js',
   './home-flow.js',
+  './layout-finalizer.js',
   './manifest.webmanifest',
   './icon.svg',
 ];
