@@ -209,5 +209,76 @@
   <script src="data.js"></script>
   <script src="firebase-local-config.js"></script>
   <script type="module" src="app.js"></script>
+  <script>
+    (() => {
+      let savedScrollY = 0;
+      let wiredModal = null;
+
+      const style = document.createElement('style');
+      style.textContent = `
+        html.detail-scroll-locked{overflow:hidden!important}
+        body.detail-scroll-locked{overflow:hidden!important;overscroll-behavior:none}
+        .detail-modal{overscroll-behavior:contain;touch-action:none}
+        .detail-panel{max-height:calc(100dvh - 36px)!important;overscroll-behavior:contain;touch-action:auto}
+        #detailBody{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y}
+        #detailBody .detail-list{overflow:visible;min-height:0}
+      `;
+      document.head.appendChild(style);
+
+      function lockBackground() {
+        if (document.body.classList.contains('detail-scroll-locked')) return;
+        savedScrollY = window.scrollY || window.pageYOffset || 0;
+        document.documentElement.classList.add('detail-scroll-locked');
+        document.body.classList.add('detail-scroll-locked');
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${savedScrollY}px`;
+        document.body.style.left = '0';
+        document.body.style.right = '0';
+        document.body.style.width = '100%';
+      }
+
+      function unlockBackground() {
+        if (!document.body.classList.contains('detail-scroll-locked')) return;
+        document.documentElement.classList.remove('detail-scroll-locked');
+        document.body.classList.remove('detail-scroll-locked');
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.width = '';
+        window.scrollTo(0, savedScrollY);
+      }
+
+      function syncModalState(modal) {
+        if (!modal || modal.classList.contains('hidden')) unlockBackground();
+        else lockBackground();
+      }
+
+      function wireDetailModal() {
+        const modal = document.getElementById('detailModal');
+        if (!modal || modal === wiredModal) return Boolean(modal);
+        wiredModal = modal;
+        const observer = new MutationObserver(() => syncModalState(modal));
+        observer.observe(modal, { attributes: true, attributeFilter: ['class'] });
+        syncModalState(modal);
+        return true;
+      }
+
+      if (!wireDetailModal()) {
+        const bodyObserver = new MutationObserver(() => {
+          if (wireDetailModal()) bodyObserver.disconnect();
+        });
+        bodyObserver.observe(document.body, { childList: true });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key !== 'Escape') return;
+        const modal = document.getElementById('detailModal');
+        if (!modal || modal.classList.contains('hidden')) return;
+        const close = document.getElementById('detailClose');
+        if (close) close.click();
+      });
+    })();
+  </script>
 </body>
 </html>
