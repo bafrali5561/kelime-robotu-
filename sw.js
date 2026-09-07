@@ -1,4 +1,4 @@
-const CACHE = 'kelime-robotu-v2';
+const CACHE = 'kelime-robotu-v3';
 const ASSETS = [
   './',
   './index.html',
@@ -27,11 +27,17 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
   if (event.request.method !== 'GET' || url.pathname.startsWith('/api/') || url.origin !== self.location.origin) return;
 
+  // Always prefer the network so a new Vercel deployment becomes visible immediately.
+  // Fall back to cache only if the user is offline.
   event.respondWith(
-    caches.match(event.request).then((cached) => cached || fetch(event.request).then((response) => {
-      const copy = response.clone();
-      caches.open(CACHE).then((cache) => cache.put(event.request, copy));
-      return response;
-    })),
+    fetch(event.request)
+      .then((response) => {
+        if (response && response.ok) {
+          const copy = response.clone();
+          caches.open(CACHE).then((cache) => cache.put(event.request, copy));
+        }
+        return response;
+      })
+      .catch(() => caches.match(event.request)),
   );
 });
