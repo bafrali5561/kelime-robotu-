@@ -1,4 +1,4 @@
-const CACHE = 'kelime-robotu-v3';
+const CACHE = 'kelime-robotu-v4';
 const ASSETS = [
   './',
   './index.html',
@@ -7,6 +7,11 @@ const ASSETS = [
   './cloud.js',
   './data.js',
   './firebase-local-config.js',
+  './dashboard-compat.js',
+  './details.js',
+  './learning-plus.js',
+  './vocabulary-overview.js',
+  './home-flow.js',
   './manifest.webmanifest',
   './icon.svg',
 ];
@@ -27,8 +32,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
   if (event.request.method !== 'GET' || url.pathname.startsWith('/api/') || url.origin !== self.location.origin) return;
 
-  // Always prefer the network so a new Vercel deployment becomes visible immediately.
-  // Fall back to cache only if the user is offline.
+  // Prefer the newest deployment and use cache only when offline.
   event.respondWith(
     fetch(event.request)
       .then((response) => {
