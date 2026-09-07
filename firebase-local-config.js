@@ -219,7 +219,16 @@ window.FIREBASE_CONFIG = {
 // avoids coupling dashboard exploration features to the core learning engine.
 if (!document.querySelector('script[data-kelime-details]')) {
   const detailScript = document.createElement('script');
-  detailScript.src = './details.js?v=20260907-1';
+  detailScript.src = './details.js?v=20260907-2';
   detailScript.dataset.kelimeDetails = '1';
   document.head.appendChild(detailScript);
+}
+
+// Advanced 8th-grade learning layer: example cards, bidirectional recall,
+// spaced review, explanations and context/LGS-style practice.
+if (!document.querySelector('script[data-kelime-learning-plus]')) {
+  const learningPlus = document.createElement('script');
+  learningPlus.src = './learning-plus.js?v=20260907-1';
+  learningPlus.dataset.kelimeLearningPlus = '1';
+  document.head.appendChild(learningPlus);
 }
