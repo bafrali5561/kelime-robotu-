@@ -41,6 +41,133 @@ function readJson(key, fallback = null) {
   }
 }
 
+function number(value) {
+  const n = Number(value || 0);
+  return Number.isFinite(n) ? n : 0;
+}
+
+function maxNumber(...values) {
+  return Math.max(0, ...values.map(number));
+}
+
+function cleanState(raw) {
+  const base = freshLearningState();
+  const src = raw && typeof raw === 'object' ? raw : {};
+  return {
+    ...base,
+    ...src,
+    progress: src.progress && typeof src.progress === 'object' ? src.progress : {},
+    stats: { ...base.stats, ...(src.stats || {}) },
+    streak: { ...base.streak, ...(src.streak || {}) },
+    activity: src.activity && typeof src.activity === 'object' ? src.activity : {},
+  };
+}
+
+function mergeDirections(a = {}, b = {}) {
+  const result = {};
+  for (const key of new Set([...Object.keys(a || {}), ...Object.keys(b || {})])) {
+    const x = a?.[key] || {};
+    const y = b?.[key] || {};
+    result[key] = {
+      ...x,
+      ...y,
+      attempts: maxNumber(x.attempts, y.attempts),
+      correct: maxNumber(x.correct, y.correct),
+    };
+  }
+  return result;
+}
+
+function mergeProgressRecord(remote = {}, local = {}) {
+  const remoteSeen = number(remote.lastSeen);
+  const localSeen = number(local.lastSeen);
+  const latest = localSeen > remoteSeen ? local : remote;
+  const other = latest === local ? remote : local;
+  const merged = { ...other, ...latest };
+
+  merged.attempts = maxNumber(remote.attempts, local.attempts);
+  merged.correct = maxNumber(remote.correct, local.correct);
+  merged.wrong = maxNumber(remote.wrong, local.wrong);
+  merged.lastSeen = maxNumber(remote.lastSeen, local.lastSeen);
+  if (remote.directions || local.directions) merged.directions = mergeDirections(remote.directions, local.directions);
+
+  if (!remoteSeen && !localSeen) {
+    merged.level = maxNumber(remote.level, local.level);
+    merged.streak = maxNumber(remote.streak, local.streak);
+    merged.nextReview = maxNumber(remote.nextReview, local.nextReview);
+    merged.smartStage = maxNumber(remote.smartStage, local.smartStage);
+    merged.smartNextReview = maxNumber(remote.smartNextReview, local.smartNextReview);
+    merged.lastWrong = Boolean(remote.lastWrong || local.lastWrong);
+  }
+
+  return merged;
+}
+
+function mergeActivity(remote = {}, local = {}) {
+  const result = {};
+  for (const day of new Set([...Object.keys(remote || {}), ...Object.keys(local || {})])) {
+    const a = remote?.[day] || {};
+    const b = local?.[day] || {};
+    result[day] = {
+      ...a,
+      ...b,
+      seconds: maxNumber(a.seconds, b.seconds),
+      attempts: maxNumber(a.attempts, b.attempts),
+      correct: maxNumber(a.correct, b.correct),
+      sessions: maxNumber(a.sessions, b.sessions),
+    };
+  }
+  return result;
+}
+
+function mergeLearningStates(remoteRaw, localRaw) {
+  const remote = cleanState(remoteRaw);
+  const local = cleanState(localRaw);
+  const progress = {};
+
+  for (const id of new Set([...Object.keys(remote.progress), ...Object.keys(local.progress)])) {
+    progress[id] = mergeProgressRecord(remote.progress[id] || {}, local.progress[id] || {});
+  }
+
+  const progressAttempts = Object.values(progress).reduce((sum, p) => sum + number(p.attempts), 0);
+  const progressCorrect = Object.values(progress).reduce((sum, p) => sum + number(p.correct), 0);
+  const remoteDate = String(remote.streak?.lastDate || '');
+  const localDate = String(local.streak?.lastDate || '');
+  const newerStreak = localDate > remoteDate ? local.streak : remote.streak;
+  const olderStreak = newerStreak === local.streak ? remote.streak : local.streak;
+  const startDates = [remote.startDate, local.startDate].filter(Boolean).sort();
+
+  return {
+    ...remote,
+    ...local,
+    startDate: startDates[0] || remote.startDate || local.startDate,
+    progress,
+    stats: {
+      attempts: maxNumber(remote.stats?.attempts, local.stats?.attempts, progressAttempts),
+      correct: maxNumber(remote.stats?.correct, local.stats?.correct, progressCorrect),
+    },
+    streak: {
+      ...olderStreak,
+      ...newerStreak,
+      lastDate: newerStreak?.lastDate || olderStreak?.lastDate || null,
+      count: remoteDate === localDate
+        ? maxNumber(remote.streak?.count, local.streak?.count)
+        : number(newerStreak?.count),
+    },
+    activity: mergeActivity(remote.activity, local.activity),
+    sound: typeof local.sound === 'boolean' ? local.sound : remote.sound,
+    dark: typeof local.dark === 'boolean' ? local.dark : remote.dark,
+  };
+}
+
+function sameState(a, b) {
+  try {
+    return JSON.stringify(cleanState(a)) === JSON.stringify(cleanState(b));
+  } catch {
+    return false;
+  }
+}
+
 function rememberLocal(uid, learningState, synced = false) {
   if (!uid || !learningState) return;
   try {
@@ -48,8 +175,8 @@ function rememberLocal(uid, learningState, synced = false) {
     const oldMeta = readJson(cacheMetaKey(uid), {}) || {};
     const ts = Date.now();
     localStorage.setItem(cacheMetaKey(uid), JSON.stringify({
-      updatedAt: Math.max(Number(oldMeta.updatedAt || 0), ts),
-      syncedAt: synced ? ts : Number(oldMeta.syncedAt || 0),
+      updatedAt: Math.max(number(oldMeta.updatedAt), ts),
+      syncedAt: synced ? ts : number(oldMeta.syncedAt),
     }));
   } catch (_) {}
 }
@@ -126,7 +253,7 @@ export async function registerUser({ name, email, password, initialState }) {
   const previousAuthUid = localStorage.getItem(LAST_UID_KEY);
   const safeInitialState = previousAuthUid && previousAuthUid !== credential.user.uid
     ? freshLearningState()
-    : (initialState && typeof initialState === 'object' ? initialState : freshLearningState());
+    : cleanState(initialState || freshLearningState());
 
   localStorage.setItem(ACTIVE_UID_KEY, credential.user.uid);
   localStorage.setItem(LAST_UID_KEY, credential.user.uid);
@@ -141,7 +268,7 @@ export async function registerUser({ name, email, password, initialState }) {
       lastLoginAt: modules.serverTimestamp(),
     },
     learningState: safeInitialState,
-    schemaVersion: 2,
+    schemaVersion: 3,
     updatedAt: modules.serverTimestamp(),
   }, { merge: true });
 
@@ -189,35 +316,44 @@ export async function loadUserDocument(uid) {
   localStorage.setItem(LAST_UID_KEY, uid);
 
   const cached = readJson(cacheKey(uid), null);
-  const meta = readJson(cacheMetaKey(uid), {}) || {};
-  const hasUnsyncedCache = cached && Number(meta.updatedAt || 0) > Number(meta.syncedAt || 0);
+  const currentForSameUser = previousUid === uid ? readJson(STATE_KEY, null) : null;
+  const localCandidate = cached && currentForSameUser
+    ? mergeLearningStates(cached, currentForSameUser)
+    : (cached || currentForSameUser);
 
   const ref = modules.doc(db, 'users', uid);
   const snapshot = await modules.getDoc(ref);
   const remote = snapshot.exists() ? snapshot.data() : null;
 
-  if (hasUnsyncedCache) {
-    await modules.setDoc(ref, {
-      learningState: cached,
-      schemaVersion: 2,
-      updatedAt: modules.serverTimestamp(),
-    }, { merge: true });
-    rememberLocal(uid, cached, true);
-    return { ...(remote || {}), learningState: cached, recoveredLocalProgress: true };
+  if (remote?.learningState && localCandidate) {
+    const merged = mergeLearningStates(remote.learningState, localCandidate);
+    if (!sameState(merged, remote.learningState)) {
+      await modules.setDoc(ref, {
+        learningState: merged,
+        schemaVersion: 3,
+        updatedAt: modules.serverTimestamp(),
+      }, { merge: true });
+    }
+    rememberLocal(uid, merged, true);
+    localStorage.setItem(STATE_KEY, JSON.stringify(merged));
+    return { ...remote, learningState: merged, mergedLocalProgress: true };
   }
 
   if (remote?.learningState) {
-    rememberLocal(uid, remote.learningState, true);
-    return remote;
+    const state = cleanState(remote.learningState);
+    rememberLocal(uid, state, true);
+    localStorage.setItem(STATE_KEY, JSON.stringify(state));
+    return { ...remote, learningState: state };
   }
 
-  const initial = cached || freshLearningState();
+  const initial = cleanState(localCandidate || freshLearningState());
   await modules.setDoc(ref, {
     learningState: initial,
-    schemaVersion: 2,
+    schemaVersion: 3,
     updatedAt: modules.serverTimestamp(),
   }, { merge: true });
   rememberLocal(uid, initial, true);
+  localStorage.setItem(STATE_KEY, JSON.stringify(initial));
   return { ...(remote || {}), learningState: initial, createdLearningState: true };
 }
 
@@ -232,20 +368,28 @@ export async function saveUserState(user, learningState) {
 
   localStorage.setItem(ACTIVE_UID_KEY, user.uid);
   localStorage.setItem(LAST_UID_KEY, user.uid);
-  rememberLocal(user.uid, learningState, false);
+  const localState = cleanState(learningState);
+  rememberLocal(user.uid, localState, false);
 
-  await modules.setDoc(modules.doc(db, 'users', user.uid), {
+  const ref = modules.doc(db, 'users', user.uid);
+  const snapshot = await modules.getDoc(ref);
+  const remote = snapshot.exists() ? snapshot.data() : null;
+  const merged = remote?.learningState ? mergeLearningStates(remote.learningState, localState) : localState;
+
+  await modules.setDoc(ref, {
     profile: {
       name: user.displayName || user.email?.split('@')[0] || 'Öğrenci',
       email: user.email || '',
       lastActiveAt: modules.serverTimestamp(),
     },
-    learningState,
-    schemaVersion: 2,
+    learningState: merged,
+    schemaVersion: 3,
     updatedAt: modules.serverTimestamp(),
   }, { merge: true });
 
-  rememberLocal(user.uid, learningState, true);
+  rememberLocal(user.uid, merged, true);
+  localStorage.setItem(STATE_KEY, JSON.stringify(merged));
+  return merged;
 }
 
 export function cloudErrorMessage(error) {
