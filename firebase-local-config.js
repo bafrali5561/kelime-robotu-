@@ -11,6 +11,88 @@ window.FIREBASE_CONFIG = {
   measurementId: "G-JCRHEP2XJR"
 };
 
+// Progress safety bridge.
+// Every module in the app writes the same local state key. This bridge mirrors that
+// state into the active user's private cache and pushes it to Firestore shortly after
+// each change. It deliberately refuses to sync when the active Firebase UID is not yet
+// known, preventing data from a previous account being written into another account.
+(() => {
+  if (window.__kelimeProgressBridgeInstalled) return;
+  window.__kelimeProgressBridgeInstalled = true;
+
+  const KEY = 'kelimeRobotu.v2';
+  const ACTIVE_UID_KEY = 'kelimeRobotu.activeUid.v1';
+  const nativeSet = Storage.prototype.setItem;
+  const nativeGet = Storage.prototype.getItem;
+  let timer = null;
+  let pendingRaw = null;
+  let syncing = false;
+
+  function cacheKey(uid) { return `kelimeRobotu.cache.${uid}`; }
+  function metaKey(uid) { return `kelimeRobotu.cacheMeta.${uid}`; }
+
+  function rememberUnsynced(uid, raw) {
+    if (!uid || !raw) return;
+    try {
+      nativeSet.call(localStorage, cacheKey(uid), raw);
+      let meta = {};
+      try { meta = JSON.parse(nativeGet.call(localStorage, metaKey(uid)) || '{}'); } catch (_) {}
+      nativeSet.call(localStorage, metaKey(uid), JSON.stringify({
+        updatedAt: Date.now(),
+        syncedAt: Number(meta.syncedAt || 0),
+      }));
+    } catch (_) {}
+  }
+
+  async function pushToCloud(raw) {
+    if (!raw || syncing) return;
+    const activeUid = nativeGet.call(localStorage, ACTIVE_UID_KEY);
+    if (!activeUid) return;
+
+    syncing = true;
+    try {
+      const cloud = await import('./cloud.js');
+      const { auth } = await cloud.initCloud();
+      const user = auth?.currentUser;
+      if (!user?.uid || user.uid !== activeUid) return;
+      const parsed = JSON.parse(raw);
+      await cloud.saveUserState(user, parsed);
+      pendingRaw = null;
+    } catch (error) {
+      console.warn('Otomatik ilerleme senkronizasyonu bekliyor:', error);
+    } finally {
+      syncing = false;
+    }
+  }
+
+  function schedule(raw) {
+    pendingRaw = raw;
+    clearTimeout(timer);
+    timer = setTimeout(() => pushToCloud(pendingRaw), 250);
+  }
+
+  Storage.prototype.setItem = function patchedSetItem(key, value) {
+    nativeSet.call(this, key, value);
+    if (this !== localStorage || key !== KEY) return;
+    const activeUid = nativeGet.call(localStorage, ACTIVE_UID_KEY);
+    if (!activeUid) return;
+    const raw = String(value);
+    rememberUnsynced(activeUid, raw);
+    schedule(raw);
+  };
+
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) return;
+    const raw = pendingRaw || nativeGet.call(localStorage, KEY);
+    if (raw) pushToCloud(raw);
+  });
+
+  window.addEventListener('pagehide', () => {
+    const raw = pendingRaw || nativeGet.call(localStorage, KEY);
+    if (raw) pushToCloud(raw);
+  });
+})();
+
 function loadKelimeScript(src, dataKey) {
   if (document.querySelector(`script[data-${dataKey}]`)) return;
   const script = document.createElement('script');
