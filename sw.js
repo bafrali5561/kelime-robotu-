@@ -1,4 +1,4 @@
-const CACHE = 'kelime-robotu-v5';
+const CACHE = 'kelime-robotu-v6';
 const ASSETS = [
   './',
   './index.html',
