@@ -105,7 +105,12 @@ async function syncNow(showToast = true) {
   cloudSaveTimer = null;
   try {
     setSyncStatus('Senkronize ediliyor…');
-    await saveUserState(cloudUser, state);
+    const mergedState = await saveUserState(cloudUser, state);
+    if (mergedState) {
+      state = normalizeState(mergedState);
+      localStorage.setItem(KEY, JSON.stringify(state));
+      renderDashboard();
+    }
     setSyncStatus('Bulutta güncel ✓');
     if (showToast) toast('İlerleme buluta kaydedildi.');
   } catch (error) {
@@ -753,22 +758,27 @@ async function handleAuthUser(user) {
   }
 
   guestMode = false;
-  showApp();
-  setSyncStatus('Buluttan yükleniyor…');
+  $('#appShell').classList.add('hidden');
+  $('#authGate').classList.remove('hidden');
+  setupMessage('İlerlemen buluttan yükleniyor…', false);
   try {
     const remote = await loadUserDocument(user.uid);
     if (remote?.learningState) {
       state = normalizeState(remote.learningState);
       localStorage.setItem(KEY, JSON.stringify(state));
     } else {
-      await saveUserState(user, state);
+      const mergedState = await saveUserState(user, state);
+      if (mergedState) {
+        state = normalizeState(mergedState);
+        localStorage.setItem(KEY, JSON.stringify(state));
+      }
     }
-    applyTheme();
-    renderDashboard();
-    updateAccountUI();
+    showApp();
     setSyncStatus('Bulutta güncel ✓');
+    setupMessage('', false);
   } catch (error) {
     console.error(error);
+    showApp();
     setSyncStatus('Senkronizasyon bekliyor');
     toast(`Bulut verisi yüklenemedi: ${cloudErrorMessage(error)}`);
   }
