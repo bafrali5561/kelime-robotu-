@@ -1,4 +1,4 @@
-const CACHE = 'kelime-robotu-v6';
+const CACHE = 'kelime-robotu-v7';
 const ASSETS = [
   './',
   './index.html',
@@ -33,7 +33,6 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
   if (event.request.method !== 'GET' || url.pathname.startsWith('/api/') || url.origin !== self.location.origin) return;
 
-  // Prefer the newest deployment and use cache only when offline.
   event.respondWith(
     fetch(event.request)
       .then((response) => {
